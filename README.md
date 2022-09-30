@@ -34,7 +34,7 @@ All documentation can be viewed online on the [Wjst Website](https://webartwork.
 Basic Example
 -------------
 
-### Template code
+### Template code `index.html`
 
 ```html
 <h1>{{ pagename|title }}</h1>
@@ -48,11 +48,11 @@ Basic Example
 ### node.js code
 
 ```js
-var swig  = require('swig-templates');
-var template = swig.compileFile('/absolute/path/to/template.html');
-var output = template({
+const wjst  = require('wjst');
+const template = wjst.compileFile('./index.html');
+const output = template({
     pagename: 'awesome people',
-    authors: ['Paul', 'Jim', 'Jane']
+    authors: ['Den', 'Paul', 'Jane']
 });
 ```
 
@@ -61,8 +61,8 @@ var output = template({
 ```html
 <h1>Awesome People</h1>
 <ul>
-    <li class="first">Paul</li>
-    <li>Jim</li>
+    <li class="first">Den</li>
+    <li>Paul</li>
     <li>Jane</li>
 </ul>
 ```
