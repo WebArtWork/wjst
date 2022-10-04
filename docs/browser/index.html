@@ -1,131 +1,133 @@
-
-  
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  <!--[if IE]>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <![endif]-->
-  <title>Wjst » Documentation &raquo; Browser Usage</title>
-  
+  <head>
+    <meta charset="utf-8" />
 
-  
+    <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+    <title>Wjst » Documentation &raquo; Browser Usage</title>
 
-  
+    <link rel="stylesheet" href="/wjst/css/swig.css" />
+  </head>
+  <body class="">
+    <header class="header">
+      <div class="content row">
+        <hgroup class="span7">
+          <h1><a href="/wjst/">Wjst</a></h1>
+          <h2>A Node.js and Browser-based JavaScript Template Engine</h2>
+        </hgroup>
 
-<link rel="stylesheet" href="/wjst/css/swig.css">
+        <nav class="span5">
+          <ul class="mainNav">
+            <li><a href="/wjst/docs/">Documentation</a></li>
+            <li><a href="https://github.com/paularmstrong/swig/">Code</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+    <div class="content row guttered">
+      <div class="span9">
+        <h1>Wjst in the Browser</h1>
 
+        <p>
+          Most of Wjst works in the browser in the same way that Wjst works
+          within node.js. The only exception to this is that Wjst is unable to
+          look up files by their path name, unless you directly tell Wjst what
+          each template's path name is before hand.
+        </p>
 
-</head>
-<body class="">
+        <p>
+          In short, Wjst cannot resolve the directive
+          <code data-language="swig">{% extends "./myfile.html" %}</code> and
+          <code data-language="swig">{% include "./myfile.html" %}</code>
+          without first having already been told about <var>./myfile.html</var>.
+        </p>
 
-  
+        <p>
+          The best way to work around this is to first pre-compile your
+          templates using the Wjst
+          <a href="/wjst/docs/cli/">command-line interface</a>.
+        </p>
 
-
-<header class="header">
-  <div class="content row">
-    <hgroup class="span7">
-      <h1><a href="/wjst/">Wjst</a></h1>
-      <h2>A Node.js and Browser-based JavaScript Template Engine</h2>
-    </hgroup>
-    
-    <nav class="span5">
-      <ul class="mainNav">
-        <li><a href="/wjst/docs/">Documentation</a></li>
-        <li><a href="https://github.com/paularmstrong/swig/">Code</a></li>
-      </ul>
-    </nav>
-  
-  </div>
-</header>
-
-
-
-<div class="content row guttered">
-  <div class="span9">
-  
-<h1>Wjst in the Browser</h1>
-
-<p>Most of Wjst works in the browser in the same way that Wjst works within node.js. The only exception to this is that Wjst is unable to look up files by their path name, unless you directly tell Wjst what each template's path name is before hand.</p>
-
-<p>In short, Wjst cannot resolve the directive <code data-language="swig">{% extends "./myfile.html" %}</code> and <code data-language="swig">{% include "./myfile.html" %}</code> without first having already been told about <var>./myfile.html</var>.</p>
-
-<p>The best way to work around this is to first pre-compile your templates using the Wjst <a href="/wjst/docs/cli/">command-line interface</a>.</p>
-
-<ol>
-  <li>
-    <p>Compile each template into JavaScript files. Assign a method name to the output that will be globally available in your browser.</p>
-    <pre><code data-language="sh">$ wjst compile myfile.html --method-name=myfile > myfile.js</code></pre>
-  </li>
-  <li>
-    <p>Include Wjst and your <samp>myfile.js</samp> in your web page.</p>
-    <pre><code data-language="html">&lt;script src="wjst.min.js"&gt;&lt;/script&gt;
+        <ol>
+          <li>
+            <p>
+              Compile each template into JavaScript files. Assign a method name
+              to the output that will be globally available in your browser.
+            </p>
+            <pre><code data-language="sh">$ wjst compile myfile.html --method-name=myfile > myfile.js</code></pre>
+          </li>
+          <li>
+            <p>
+              Include Wjst and your <samp>myfile.js</samp> in your web page.
+            </p>
+            <pre><code data-language="html">&lt;script src="wjst.min.js"&gt;&lt;/script&gt;
 &lt;script src="myfile.js"&gt;&lt;/script&gt;
 </code></pre>
-  </li>
-  <li>
-    <p>Pre-run the template to prime Wjst's cache.</p>
-    <pre><code data-language="js">wjst.run(myfile, {}, '/myfile.html');</code></pre>
-  </li>
-  <li>
-    <p>Now, you are ready to render a template in-browser that can extend <samp>myfile.html</samp></p>
-    <pre><code data-language="js">var tpl = '{% extends "./myfile.html" %}{% block content %}{{ stuff }}{% endblock %}';
+          </li>
+          <li>
+            <p>Pre-run the template to prime Wjst's cache.</p>
+            <pre><code data-language="js">wjst.run(myfile, {}, '/myfile.html');</code></pre>
+          </li>
+          <li>
+            <p>
+              Now, you are ready to render a template in-browser that can extend
+              <samp>myfile.html</samp>
+            </p>
+            <pre><code data-language="js">var tpl = '{% extends "./myfile.html" %}{% block content %}{{ stuff }}{% endblock %}';
 var output = wjst.render(tpl, { filename: '/tpl', locals: { stuff: 'awesome' }});
 document.querySelector('#foo').innerHTML = output;</code></pre>
-  </li>
-</ol>
+          </li>
+        </ol>
+      </div>
 
-  </div>
+      <div class="span3">
+        <nav>
+          <ol class="sidenav">
+            <li>
+              <a href="/wjst/docs/">Getting Started</a>
+            </li>
+            <li>
+              <a href="/wjst/docs/api/">Wjst API</a>
+            </li>
+            <li>
+              <a href="/wjst/docs/filters/">Filters</a>
+            </li>
+            <li>
+              <a href="/wjst/docs/tags/">Tags</a>
+            </li>
+            <li>
+              <a href="/wjst/docs/loaders/">Template Loaders</a>
+            </li>
+            <li>
+              <a href="/wjst/docs/cli/">Command-Line</a>
+            </li>
+            <li>
+              <a href="/wjst/docs/browser/">Browser Usage</a>
+            </li>
+            <li>
+              <a href="/wjst/docs/extending/">Extending Wjst</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
 
-  <div class="span3">
-<nav>
-  <ol class="sidenav">
-    <li>
-      <a href="/wjst/docs/">Getting Started</a>
-      
-    </li>
-    <li>
-      <a href="/wjst/docs/api/">Wjst API</a>
-      
-    </li>
-    <li>
-      <a href="/wjst/docs/filters/">Filters</a>
-      
-    </li>
-    <li>
-      <a href="/wjst/docs/tags/">Tags</a>
-    </li>
-    <li>
-      <a href="/wjst/docs/loaders/">Template Loaders</a>
-    </li>
-    <li>
-      <a href="/wjst/docs/cli/">Command-Line</a>
-    </li>
-    <li>
-      <a href="/wjst/docs/browser/">Browser Usage</a>
-    </li>
-    <li>
-      <a href="/wjst/docs/extending/">Extending Wjst</a>
-    </li>
-  </ol>
-</nav>
-</div>
-</div>
+    <footer class="content">
+      <hr class="small" />
+      <p>
+        Wjst is copyright &copy;2016
+        <a href="http://paularmstrongdesigns.com">Paul Armstrong</a>, licensed
+        for use under the permissive MIT Open Source License.
+      </p>
+      <a class="forkme" href="https://github.com/paularmstrong/swig"
+        >Fork me on GitHub</a
+      >
+    </footer>
 
-
-<footer class="content">
-  <hr class="small">
-  <p>Wjst is copyright &copy;2016 <a href="http://paularmstrongdesigns.com">Paul Armstrong</a>, licensed for use under the permissive MIT Open Source License.</p>
-  <a class="forkme" href="https://github.com/paularmstrong/swig">Fork me on GitHub</a>
-</footer>
-
-
-  
-<script src="/wjst/js/lib/rainbow.min.js"></script>
-<script src="/wjst/js/master.js"></script>
-
-</body>
+    <script src="/wjst/js/lib/rainbow.min.js"></script>
+    <script src="/wjst/js/master.js"></script>
+  </body>
 </html>
