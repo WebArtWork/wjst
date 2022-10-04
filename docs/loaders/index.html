@@ -8,7 +8,7 @@
   <!--[if IE]>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <![endif]-->
-  <title>Swig » Documentation &raquo; Template Loaders</title>
+  <title>Wjst » Documentation &raquo; Template Loaders</title>
   
 
   
@@ -28,7 +28,7 @@
 <header class="header">
   <div class="content row">
     <hgroup class="span7">
-      <h1><a href="/swig-templates/">Swig</a></h1>
+      <h1><a href="/swig-templates/">Wjst</a></h1>
       <h2>A Node.js and Browser-based JavaScript Template Engine</h2>
     </hgroup>
     
@@ -56,7 +56,7 @@
     
     
       <section id="">
-        <h3>swig.loaders.fs(basepath, encoding)</h3>
+        <h3>wjst.loaders.fs(basepath, encoding)</h3>
 
         
 <p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v2.0.0/lib/loaders/filesystem.js">lib/loaders/filesystem.js</a></p>
@@ -109,16 +109,16 @@
         </table>
 
         
-        <pre><code data-language="js">swig.setDefaults({ loader: swig.loaders.fs() });</code></pre>
+        <pre><code data-language="js">wjst.setDefaults({ loader: wjst.loaders.fs() });</code></pre>
         
         <pre><code data-language="js">// Load Templates from a specific directory (does not require using relative paths in your templates)
-swig.setDefaults({ loader: swig.loaders.fs(__dirname + &#39;/templates&#39; )});</code></pre>
+wjst.setDefaults({ loader: wjst.loaders.fs(__dirname + &#39;/templates&#39; )});</code></pre>
         
 
       </section>
     
       <section id="">
-        <h3>swig.loaders.memory(mapping, basepath)</h3>
+        <h3>wjst.loaders.memory(mapping, basepath)</h3>
 
         
 <p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v2.0.0/lib/loaders/memory.js">lib/loaders/memory.js</a></p>
@@ -175,7 +175,7 @@ swig.setDefaults({ loader: swig.loaders.fs(__dirname + &#39;/templates&#39; )});
   &quot;layout&quot;: &quot;{% block content %}{% endblock %}&quot;,
   &quot;home.html&quot;: &quot;{% extends &#39;layout.html&#39; %}{% block content %}...{% endblock %}&quot;
 };
-swig.setDefaults({ loader: swig.loaders.memory(templates) });</code></pre>
+wjst.setDefaults({ loader: wjst.loaders.memory(templates) });</code></pre>
         
 
       </section>
@@ -188,7 +188,7 @@ swig.setDefaults({ loader: swig.loaders.memory(templates) });</code></pre>
 
     
 
-  <p>Swig is able to accept custom template loaders written by you, so that your templates can come from your favorite storage medium without needing to be part of the core library.</p><p>A template loader consists of two methods: <var>resolve</var> and <var>load</var>. Each method is used internally by Swig to find and load the source of the template before attempting to parse and compile it.</p>
+  <p>Wjst is able to accept custom template loaders written by you, so that your templates can come from your favorite storage medium without needing to be part of the core library.</p><p>A template loader consists of two methods: <var>resolve</var> and <var>load</var>. Each method is used internally by Wjst to find and load the source of the template before attempting to parse and compile it.</p>
 
 
 
@@ -300,7 +300,7 @@ function memcachedLoader(locations, options) {
   };
 };
 // Tell swig about the loader:
-swig.setDefaults({ loader: memcachedLoader([&#39;192.168.0.2&#39;]) });</code></pre>
+wjst.setDefaults({ loader: memcachedLoader([&#39;192.168.0.2&#39;]) });</code></pre>
     
 
   </section>
@@ -315,7 +315,7 @@ swig.setDefaults({ loader: memcachedLoader([&#39;192.168.0.2&#39;]) });</code></
       
     </li>
     <li>
-      <a href="/swig-templates/docs/api/">Swig API</a>
+      <a href="/swig-templates/docs/api/">Wjst API</a>
       
     </li>
     <li>
@@ -350,7 +350,7 @@ swig.setDefaults({ loader: memcachedLoader([&#39;192.168.0.2&#39;]) });</code></
       
     </li>
     <li>
-      <a href="/swig-templates/docs/extending/">Extending Swig</a>
+      <a href="/swig-templates/docs/extending/">Extending Wjst</a>
       
     </li>
     <li><a href="/swig-templates/docs/previous/">Older Versions</a></li>
@@ -362,7 +362,7 @@ swig.setDefaults({ loader: memcachedLoader([&#39;192.168.0.2&#39;]) });</code></
 
 <footer class="content">
   <hr class="small">
-  <p>Swig is copyright &copy;2016 <a href="http://paularmstrongdesigns.com">Paul Armstrong</a>, licensed for use under the permissive MIT Open Source License.</p>
+  <p>Wjst is copyright &copy;2016 <a href="http://paularmstrongdesigns.com">Paul Armstrong</a>, licensed for use under the permissive MIT Open Source License.</p>
   <a class="forkme" href="https://github.com/paularmstrong/swig">Fork me on GitHub</a>
 </footer>
 
