@@ -8,7 +8,7 @@
   <!--[if IE]>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <![endif]-->
-  <title>Swig » Documentation &raquo; Extending Swig</title>
+  <title>Wjst » Documentation &raquo; Extending Wjst</title>
   
 
   
@@ -28,7 +28,7 @@
 <header class="header">
   <div class="content row">
     <hgroup class="span7">
-      <h1><a href="/swig-templates/">Swig</a></h1>
+      <h1><a href="/swig-templates/">Wjst</a></h1>
       <h2>A Node.js and Browser-based JavaScript Template Engine</h2>
     </hgroup>
     
@@ -48,7 +48,7 @@
   <div class="span9">
   
 
-<h1 id="extending">Extending Swig</h1>
+<h1 id="extending">Extending Wjst</h1>
 
 <section id="filters">
   <h2>Custom Filters</h2>
@@ -58,7 +58,7 @@
   <section class="doc">
     
 
-  <p>Filters are simply functions that perform transformations on their first input argument.</p><p>Filters are run at render time, so they may not directly modify the compiled template structure in any way.</p><p>All of Swig's built-in filters are written in this same way. For more examples, reference the `filters.js` file in Swig's source.</p><p></p><p>To disable auto-escaping on a custom filter, simply add a property to the filter method `safe = true;` and the output from this will not be escaped, no matter what the global settings are for Swig.</p>
+  <p>Filters are simply functions that perform transformations on their first input argument.</p><p>Filters are run at render time, so they may not directly modify the compiled template structure in any way.</p><p>All of Wjst's built-in filters are written in this same way. For more examples, reference the `filters.js` file in Wjst's source.</p><p></p><p>To disable auto-escaping on a custom filter, simply add a property to the filter method `safe = true;` and the output from this will not be escaped, no matter what the global settings are for Wjst.</p>
 
 
 
@@ -82,7 +82,7 @@
         <td><samp data-language="js">undefined</samp></td>
         <td>
 
-  <p>Input argument, automatically sent from Swig's built-in parser.</p>
+  <p>Input argument, automatically sent from Wjst's built-in parser.</p>
 
 </td>
       </tr>
@@ -104,7 +104,7 @@
 
     
     <pre><code data-language="js">// This filter will return &#39;bazbop&#39; if the idx on the input is not &#39;foobar&#39;
-swig.setFilter(&#39;foobar&#39;, function (input, idx) {
+wjst.setFilter(&#39;foobar&#39;, function (input, idx) {
   return input[idx] === &#39;foobar&#39; ? input[idx] : &#39;bazbop&#39;;
 });
 // myvar = [&#39;foo&#39;, &#39;bar&#39;, &#39;baz&#39;, &#39;bop&#39;];
@@ -115,7 +115,7 @@ swig.setFilter(&#39;foobar&#39;, function (input, idx) {
     <pre><code data-language="js">// This filter will disable auto-escaping on its output:
 function bazbop (input) { return input; }
 bazbop.safe = true;
-swig.setFilter(&#39;bazbop&#39;, bazbop);
+wjst.setFilter(&#39;bazbop&#39;, bazbop);
 // =&gt; {{ &quot;&lt;p&gt;&quot;|bazbop }}
 // =&gt; &lt;p&gt;</code></pre>
     
@@ -403,14 +403,14 @@ swig.setFilter(&#39;bazbop&#39;, bazbop);
 <section id="tags">
   <h2>Custom Tags</h2>
 
-  <p>Swig can be extended to handle custom tags that will perform operations on full blocks of your templates. Use <a href="/swig-templates/docs/api/#setTag"><code data-language="js">swig.setTag(name, parse, compile, ends, blockLevel)</code></a> to add your custom tag.</p>
+  <p>Wjst can be extended to handle custom tags that will perform operations on full blocks of your templates. Use <a href="/swig-templates/docs/api/#setTag"><code data-language="js">wjst.setTag(name, parse, compile, ends, blockLevel)</code></a> to add your custom tag.</p>
 
-  <p>All of Swig's tags are written using the same api (with a few exceptions for core modules, like <var>extends</var> and <var>block</var>). View a tag's source to see more examples to write your own custom tags.</p>
+  <p>All of Wjst's tags are written using the same api (with a few exceptions for core modules, like <var>extends</var> and <var>block</var>). View a tag's source to see more examples to write your own custom tags.</p>
 
   
   
   <section id="parse" class="doc">
-    <h3>parse(str, line, parser, types, stack, options, swig)</h3>
+    <h3>parse(str, line, parser, types, stack, options, wjst)</h3>
 
     <p>
 
@@ -493,24 +493,24 @@ swig.setFilter(&#39;bazbop&#39;, bazbop);
       
       <tr>
         <td><var data-language="js">options</var></td>
-        <td><code data-language="js">SwigOpts</code></td>
+        <td><code data-language="js">WjstOpts</code></td>
         <td></td>
         <td><samp data-language="js">undefined</samp></td>
         <td>
 
-  <p>Swig Options Object.</p>
+  <p>Wjst Options Object.</p>
 
 </td>
       </tr>
       
       <tr>
-        <td><var data-language="js">swig</var></td>
+        <td><var data-language="js">wjst</var></td>
         <td><code data-language="js">object</code></td>
         <td></td>
         <td><samp data-language="js">undefined</samp></td>
         <td>
 
-  <p>The Swig instance (gives acces to loaders, parsers, etc)</p>
+  <p>The Wjst instance (gives acces to loaders, parsers, etc)</p>
 
 </td>
       </tr>
@@ -519,7 +519,7 @@ swig.setFilter(&#39;bazbop&#39;, bazbop);
     </table>
 
     
-    <pre><code data-language="js">exports.parse = function (str, line, parser, types, options, swig) {
+    <pre><code data-language="js">exports.parse = function (str, line, parser, types, options, wjst) {
   parser.on(&#39;start&#39;, function () {
     // ...
   });
@@ -601,12 +601,12 @@ swig.setFilter(&#39;bazbop&#39;, bazbop);
       
       <tr>
         <td><var data-language="js">options</var></td>
-        <td><code data-language="js">SwigOpts</code></td>
+        <td><code data-language="js">WjstOpts</code></td>
         <td>✔</td>
         <td><samp data-language="js">undefined</samp></td>
         <td>
 
-  <p>Swig Options Object</p>
+  <p>Wjst Options Object</p>
 
 </td>
       </tr>
@@ -1530,7 +1530,7 @@ swig.setFilter(&#39;bazbop&#39;, bazbop);
       
     </li>
     <li>
-      <a href="/swig-templates/docs/api/">Swig API</a>
+      <a href="/swig-templates/docs/api/">Wjst API</a>
       
     </li>
     <li>
@@ -1554,7 +1554,7 @@ swig.setFilter(&#39;bazbop&#39;, bazbop);
       
     </li>
     <li>
-      <a href="/swig-templates/docs/extending/">Extending Swig</a>
+      <a href="/swig-templates/docs/extending/">Extending Wjst</a>
       
 <ol>
   <li><a href="#filters">Custom Filters</a></li>
@@ -1580,7 +1580,7 @@ swig.setFilter(&#39;bazbop&#39;, bazbop);
 
 <footer class="content">
   <hr class="small">
-  <p>Swig is copyright &copy;2016 <a href="http://paularmstrongdesigns.com">Paul Armstrong</a>, licensed for use under the permissive MIT Open Source License.</p>
+  <p>Wjst is copyright &copy;2016 <a href="http://paularmstrongdesigns.com">Paul Armstrong</a>, licensed for use under the permissive MIT Open Source License.</p>
   <a class="forkme" href="https://github.com/paularmstrong/swig">Fork me on GitHub</a>
 </footer>
 
