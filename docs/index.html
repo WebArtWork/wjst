@@ -14,7 +14,7 @@
   <header class="header">
     <div class="content row">
       <hgroup class="span7">
-        <h1><a href="/wjst/">Wjst BLA BLA</a></h1>
+        <h1><a href="/wjst/">Wjst</a></h1>
         <h2>A Node.js and Browser-based JavaScript Template Engine</h2>
       </hgroup>
 
@@ -43,8 +43,7 @@
           <a href="/wjst/docs/api/">API documentation</a> for more detailed
           information and usage.
         </p>
-        <pre>
-					<code data-language="js">
+        <pre><code data-language="js">
 						const wjst = require('wjst');
 						// Compile a file and store it, rendering it later
 						var tpl = wjst.compileFile('/path/to/template.html');
@@ -52,8 +51,7 @@
 
 						// Immediately render a Wjst template from a string
 						console.log(wjst.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true }}));
-					</code>
-				</pre>
+          </code></pre>
       </section>
 
       <section id="variables" class="doc">
