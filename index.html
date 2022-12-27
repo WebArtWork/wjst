@@ -48,19 +48,21 @@
         <pre><code>npm install wjst --save</code></pre>
         <h3>Create Your Template</h3>
         <pre><code data-language="wjst">&lt;h1&gt;{{ pagename|title }}&lt;/h1&gt;
-&lt;ul&gt;
-{% for author in authors %}
-  &lt;li{% if loop.first %} class="first"{% endif %}&gt;
-    {{ author }}
-  &lt;/li&gt;
-{% endfor %}
-&lt;/ul&gt;</code></pre>
+          &lt;ul&gt;
+          {% for author in authors %}
+            &lt;li{% if loop.first %} class="first"{% endif %}&gt;
+              {{ author }}
+            &lt;/li&gt;
+          {% endfor %}
+          &lt;/ul&gt;
+        </code></pre>
         <h3>Render Your Template</h3>
-        <pre><code data-language="javascript">const wjst  = require('wjst');
-wjst.renderFile('/path/to/template.html', {
-    pagename: 'awesome people',
-    authors: ['Den', 'Paul', 'Jane']
-});</code></pre>
+        <pre>
+          <code data-language="javascript">
+            const wjst  = require('wjst');
+            wjst.renderFile('/path/to/template.html', { pagename: 'awesome people', authors: ['Den', 'Paul', 'Jane']});
+          </code>
+        </pre>
         <h3>The End Result</h3>
         <pre><code data-language="html">
 					&lt;h1&gt;Awesome People&lt;/h1&gt;&lt;ul&gt;&lt;li class="first"&gt;Den&lt;/li&gt;
