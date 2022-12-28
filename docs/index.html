@@ -44,6 +44,7 @@
           information and usage.
         </p>
         <pre><code data-language="js">const wjst = require('wjst');
+
 // Compile a file and store it, rendering it later
 var tpl = wjst.compileFile('/path/to/template.html');
 console.log(tpl({ article: { title: 'Wjst is fun!' }}));
@@ -131,6 +132,7 @@ wjst.render('{{ mystuff() }}', { locals: locals });
 // => &amp;lt;p&amp;gt;Things&amp;lt;/p&amp;gt;</code></pre>
       </section>
 
+      <!-- L O G I C   T A G S -->
       <section id="tags" class="doc">
         <h2>Logic Tags</h2>
 
@@ -141,14 +143,12 @@ wjst.render('{{ mystuff() }}', { locals: locals });
         </p>
 
         <pre><code data-language="wjst">{% if foo %}bar{% endif %}
-
-								// Create a list of people, only if there are items in the people array
-								{% for person in people %}
-								{% if loop.first %}<ol>{% endif %}
-									<li>{{ person.name }}</li>
-								{% if loop.last %}</ol>{% endif %}
-								{% endfor %}
-							</code></pre>
+// Create a list of people, only if there are items in the people array
+{% for person in people %}
+  {% if loop.first %}<ol>{% endif %}
+    <li>{{ person.name }}</li>
+  {% if loop.last %}</ol>{% endif %}
+{% endfor %}</code></pre>
 
         <p>
           <code>end</code> tags may also have any set of extra context within
@@ -157,13 +157,13 @@ wjst.render('{{ mystuff() }}', { locals: locals });
         </p>
 
         <pre><code data-language="swig">{% block tacos %}
-								//...
-								{% endblock tacos %}
-								{% block burritos %}
-								{% if foo %}
-								// ...
-								{% endif the above will render if foo == true %}
-							{% endblock burritos %}</code></pre>
+  //...
+{% endblock tacos %}
+{% block burritos %}
+  {% if foo %}
+    // ...
+  {% endif the above will render if foo == true %}
+{% endblock burritos %}</code></pre>
 
         <p>
           View the <a href="/wjst/docs/tags/">Tags documentation</a> for a
@@ -171,6 +171,7 @@ wjst.render('{{ mystuff() }}', { locals: locals });
         </p>
       </section>
 
+      <!-- C O M M E N T S -->
       <section id="comments" class="doc">
         <h2>Comments</h2>
 
@@ -182,10 +183,11 @@ wjst.render('{{ mystuff() }}', { locals: locals });
         </p>
 
         <pre><code data-language="swig">{#
-								This is a comment.
-								It will be fully stripped and ignored during parsing.
-							#}</code></pre>
+This is a comment.
+It will be fully stripped and ignored during parsing.
+#}</code></pre>
       </section>
+
 
       <section id="whitespace" class="doc">
         <h2>Whitespace Control</h2>
@@ -203,9 +205,9 @@ wjst.render('{{ mystuff() }}', { locals: locals });
         </p>
 
         <pre><code data-language="swig">// seq = [1, 2, 3, 4, 5]
-								{% for item in seq -%}{{ item }}
-							{%- endfor %}</code>
-							// => <samp>12345</samp></pre>
+{% for item in seq -%}{{ item }}
+{%- endfor %}</code>
+// => <samp>12345</samp></pre>
 
         <p>
           <em>Note: there must <strong>not</strong> be any space between the
@@ -223,33 +225,33 @@ wjst.render('{{ mystuff() }}', { locals: locals });
 
         <h3>layout.html</h3>
         <pre><code data-language="swig">&lt;!doctype html&gt;
-								&lt;html&gt;
-								&lt;head&gt;
-								&lt;meta charset="utf-8"&gt;
-								&lt;title&gt;{% block title %}My Site{% endblock %}&lt;/title&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;{% block title %}My Site{% endblock %}&lt;/title&gt;
 
-								{% block head %}
-								&lt;link rel="stylesheet" href="main.css"&gt;
-								{% endblock %}
-								&lt;/head&gt;
-								&lt;body&gt;
-								{% block content %}{% endblock %}
-								&lt;/body&gt;
-							&lt;/html&gt;</code></pre>
+  {% block head %}
+  &lt;link rel="stylesheet" href="main.css"&gt;
+  {% endblock %}
+&lt;/head&gt;
+&lt;body&gt;
+  {% block content %}{% endblock %}
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
         <h3>index.html</h3>
         <pre><code data-language="swig">{% extends 'layout.html' %}
 
-								{% block title %}My Page{% endblock %}
+{% block title %}My Page{% endblock %}
 
-								{% block head %}
-								{% parent %}
-								&lt;link rel="stylesheet" href="custom.css"&gt;
-								{% endblock %}
+{% block head %}
+  {% parent %}
+  &lt;link rel="stylesheet" href="custom.css"&gt;
+{% endblock %}
 
-								{% block content %}
-								&lt;p&gt;This is just an awesome page.&lt;/p&gt;
-							{% endblock %}</code></pre>
+{% block content %}
+&lt;p&gt;This is just an awesome page.&lt;/p&gt;
+{% endblock %}</code></pre>
       </section>
 
       <section id="express" class="doc">
@@ -263,30 +265,29 @@ wjst.render('{{ mystuff() }}', { locals: locals });
         </p>
 
         <pre><code data-language="js">var app = require('express')(),
-								wjst = require('wjst'),
-								people;
+  wjst = require('wjst'),
+  people;
 
-								// This is where all the magic happens!
-								app.engine('html', wjst.renderFile);
+// This is where all the magic happens!
+app.engine('html', wjst.renderFile);
 
-								app.set('view engine', 'html');
-								app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
 
-								// Wjst will cache templates for you, but you can disable
-								// that and use Express's caching instead, if you like:
-								app.set('view cache', false);
-								// To disable Wjst's cache, do the following:
-								wjst.setDefaults({ cache: false });
-								// NOTE: You should always cache templates in a production environment.
-								// Don't leave both of these to `false` in production!
+// Wjst will cache templates for you, but you can disable
+// that and use Express's caching instead, if you like:
+app.set('view cache', false);
+// To disable Wjst's cache, do the following:
+wjst.setDefaults({ cache: false });
+// NOTE: You should always cache templates in a production environment.
+// Don't leave both of these to `false` in production!
 
-								app.get('/', function (req, res) {
-									res.render('index', { /* template locals context */ });
-								});
+app.get('/', function (req, res) {
+  res.render('index', { /* template locals context */ });
+});
 
-								app.listen(8000);
-								console.log('Application Started on http://localhost:8000/');
-							</code></pre>
+app.listen(8000);
+console.log('Application Started on http://localhost:8000/');</code></pre>
       </section>
     </div>
     <div class="span3">
