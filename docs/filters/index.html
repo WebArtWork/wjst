@@ -341,17 +341,15 @@
 
         <h3>Examples</h3>
 
-        <pre><code data-language="swig">
-        // people = [{ age: 23, name: &#39;Paul&#39; }, { age: 26, name: &#39;Jane&#39; }, { age: 23, name: &#39;Jim&#39; }];
-        {% for agegroup in people|groupBy(&#39;age&#39;) %}
-          &lt;h2&gt;{{ loop.key }}&lt;/h2&gt;
-          &lt;ul&gt;
-            {% for person in agegroup %}
-            &lt;li&gt;{{ person.name }}&lt;/li&gt;
-            {% endfor %}
-          &lt;/ul&gt;
-        {% endfor %}
-        </code></pre>
+        <pre><code data-language="swig">// people = [{ age: 23, name: &#39;Paul&#39; }, { age: 26, name: &#39;Jane&#39; }, { age: 23, name: &#39;Jim&#39; }];
+{% for agegroup in people|groupBy(&#39;age&#39;) %}
+  &lt;h2&gt;{{ loop.key }}&lt;/h2&gt;
+  &lt;ul&gt;
+    {% for person in agegroup %}
+    &lt;li&gt;{{ person.name }}&lt;/li&gt;
+    {% endfor %}
+  &lt;/ul&gt;
+{% endfor %}</code></pre>
       </section>
 
       <section id="join" class="doc">
