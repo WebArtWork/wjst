@@ -72,10 +72,8 @@ console.log(wjst.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true 
 
         <pre>
 					<code data-language="wjst">{{ foo.bar }}
-					// is equivalent to
-						{{ foo['bar'] }}
-					</code>
-				</pre>
+// is equivalent to
+{{ foo['bar'] }}</code></pre>
 
         <p>
           However, notation style follows the same rules as JavaScript. If a
@@ -110,7 +108,7 @@ console.log(wjst.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true 
         </p>
 
         <pre><code data-language="wjst">{{ name|title }} was born on {{ birthday|date('F jS, Y') }}</code>
-					// => <samp>Jane was born on July 6th, 1985</samp></pre>
+// => <samp>Jane was born on July 6th, 1985</samp></pre>
 
         <h3 id="variable-functions">Functions</h3>
         <p>
