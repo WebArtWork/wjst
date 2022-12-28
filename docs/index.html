@@ -70,8 +70,7 @@ console.log(wjst.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true 
           equivalent:
         </p>
 
-        <pre>
-					<code data-language="wjst">{{ foo.bar }}
+        <pre><code data-language="wjst">{{ foo.bar }}
 // is equivalent to
 {{ foo['bar'] }}</code></pre>
 
@@ -110,6 +109,7 @@ console.log(wjst.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true 
         <pre><code data-language="wjst">{{ name|title }} was born on {{ birthday|date('F jS, Y') }}</code>
 // => <samp>Jane was born on July 6th, 1985</samp></pre>
 
+        <!-- F U N C T I O N S -->
         <h3 id="variable-functions">Functions</h3>
         <p>
           Variables can also be JavaScript functions. It is important to note
@@ -119,8 +119,8 @@ console.log(wjst.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true 
         </p>
 
         <pre><code data-language="js">var locals = { mystuff: function mystuff() { return '<p>Things!</p>'; } };
-						wjst.render('{{ mystuff() }}', { locals: locals });
-						// => &lt;p&gt;Things!&lt;/p&gt;</code></pre>
+wjst.render('{{ mystuff() }}', { locals: locals });
+// => &lt;p&gt;Things!&lt;/p&gt;</code></pre>
 
         <p>
           If you want to enforce escaping output on functions, just pipe them
@@ -128,7 +128,7 @@ console.log(wjst.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true 
         </p>
 
         <pre><code data-language="wjst">{{ mystuff()|escape }}
-							// => &amp;lt;p&amp;gt;Things&amp;lt;/p&amp;gt;</code></pre>
+// => &amp;lt;p&amp;gt;Things&amp;lt;/p&amp;gt;</code></pre>
       </section>
 
       <section id="tags" class="doc">
