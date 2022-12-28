@@ -46,7 +46,7 @@
         <pre><code data-language="js">const wjst = require('wjst');
 
 // Compile a file and store it, rendering it later
-var tpl = wjst.compileFile('/path/to/template.html');
+let tpl = wjst.compileFile('/path/to/template.html');
 console.log(tpl({ article: { title: 'Wjst is fun!' }}));
 
 // Immediately render a Wjst template from a string
@@ -119,7 +119,7 @@ console.log(wjst.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true 
           will <em>not</em> be auto-escaped.
         </p>
 
-        <pre><code data-language="js">var locals = { mystuff: function mystuff() { return '<p>Things!</p>'; } };
+        <pre><code data-language="js">let locals = { mystuff: function mystuff() { return '<p>Things!</p>'; } };
 wjst.render('{{ mystuff() }}', { locals: locals });
 // => &lt;p&gt;Things!&lt;/p&gt;</code></pre>
 
@@ -264,7 +264,7 @@ It will be fully stripped and ignored during parsing.
           integrating Wjst with Express:
         </p>
 
-        <pre><code data-language="js">var app = require('express')(),
+        <pre><code data-language="js">let app = require('express')(),
   wjst = require('wjst'),
   people;
 
