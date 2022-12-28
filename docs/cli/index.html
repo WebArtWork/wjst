@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
 
-    <!--[if IE]>
+<head>
+  <meta charset="utf-8" />
+
+  <!--[if IE]>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <![endif]-->
-    <title>Wjst » Documentation &raquo; CLI</title>
+  <title>Wjst » Documentation &raquo; CLI</title>
 
-    <link rel="stylesheet" href="/wjst/css/swig.css" />
-  </head>
-  <body class="">
-    <header class="header">
-      <div class="content row">
-        <hgroup class="span7">
-          <h1><a href="/wjst/">Wjst</a></h1>
-          <h2>A Node.js and Browser-based JavaScript Template Engine</h2>
-        </hgroup>
+  <link rel="stylesheet" href="/wjst/css/swig.css" />
+</head>
 
-        <nav class="span5">
-          <ul class="mainNav">
-            <li><a href="/wjst/docs/">Documentation</a></li>
-            <li><a href="https://github.com/paularmstrong/swig/">Code</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<body class="">
+  <header class="header">
+    <div class="content row">
+      <hgroup class="span7">
+        <h1><a href="/wjst/">Wjst</a></h1>
+        <h2>A Node.js and Browser-based JavaScript Template Engine</h2>
+      </hgroup>
 
-    <div class="content row guttered">
-      <div class="span9">
-        <h1>Command-Line Interface</h1>
+      <nav class="span5">
+        <ul class="mainNav">
+          <li><a href="/wjst/docs/">Documentation</a></li>
+          <li><a href="https://github.com/paularmstrong/swig/">Code</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <section id="install" class="doc">
-          <h2>Installation</h2>
+  <div class="content row guttered">
+    <div class="span9">
+      <h1>Command-Line Interface</h1>
 
-          <p>Via NPM:</p>
-          <pre><code data-language="sh">$ npm install wjst --global</code></pre>
-        </section>
+      <section id="install" class="doc">
+        <h2>Installation</h2>
 
-        <section id="usage" class="doc">
-          <h2>Usage</h2>
+        <p>Via NPM:</p>
+        <pre><code data-language="sh">$ npm install wjst --global</code></pre>
+      </section>
 
-          <pre><code data-language="sh">$ wjst compile [file...] [options]
+      <section id="usage" class="doc">
+        <h2>Usage</h2>
+
+        <pre><code data-language="sh">$ wjst compile [file...] [options]
 $ wjst render [file...] [options]
 $ wjst run [file...] [options]</code></pre>
 
-          <h3>Options</h3>
-          <pre>
+        <h3>Options</h3>
+        <pre>
 -v, --version  Show the Wjst version number.
 -o, --output   Output location. [default: "stdout"]
 -h, --help     Show this help screen.
@@ -58,86 +60,84 @@ $ wjst run [file...] [options]</code></pre>
 --options      Customize Wjst's Options from a CommonJS-style file
 --wrap-start   Template wrapper beginning for "compile". [default: "var tpl = "]
 --wrap-end     Template wrapper end for "compile". [default: ";"]
---method-name  Method name to set template to and run from. [default: "tpl"]</pre
-          >
-        </section>
+--method-name  Method name to set template to and run from. [default: "tpl"]</pre>
+      </section>
 
-        <section id="examples" class="doc">
-          <h2>Examples</h2>
+      <section id="examples" class="doc">
+        <h2>Examples</h2>
 
-          <p>Render a single file:</p>
-          <pre><code data-language="sh">$ wjst render ./index.html</code></pre>
+        <p>Render a single file:</p>
+        <pre><code data-language="sh">$ wjst render ./index.html</code></pre>
 
-          <p>
-            Compile and cache a template into a renderable function and minify
-            the output with uglify-js:
-          </p>
-          <pre><code data-language="sh">$ wjst compile ./index.html -m > ./cache/index.js</code></pre>
+        <p>
+          Compile and cache a template into a renderable function and minify
+          the output with uglify-js:
+        </p>
+        <pre><code data-language="sh">$ wjst compile ./index.html -m > ./cache/index.js</code></pre>
 
-          <p>Run and build the previously cached template:</p>
-          <pre><code data-language="sh">$ wjst run ./cache/index.js</code></pre>
+        <p>Run and build the previously cached template:</p>
+        <pre><code data-language="sh">$ wjst run ./cache/index.js</code></pre>
 
-          <p>
-            Import a JSON file as the variable context for rendering a template:
-          </p>
-          <pre><code data-language="sh">$ wjst render ./index.html -j ./index.json</code></pre>
+        <p>
+          Import a JSON file as the variable context for rendering a template:
+        </p>
+        <pre><code data-language="sh">$ wjst render ./index.html -j ./index.json</code></pre>
 
-          <p>Make your template an AMD module:</p>
-          <pre><code data-language="sh">$ wjst compile ./index.html --wrap-start="define(function () { return " --wrap-end="; });"</code></pre>
-        </section>
-      </div>
-
-      <div class="span3">
-        <nav>
-          <ol class="sidenav">
-            <li>
-              <a href="/wjst/docs/">Getting Started</a>
-            </li>
-            <li>
-              <a href="/wjst/docs/api/">Wjst API</a>
-            </li>
-            <li>
-              <a href="/wjst/docs/filters/">Filters</a>
-            </li>
-            <li>
-              <a href="/wjst/docs/tags/">Tags</a>
-            </li>
-            <li>
-              <a href="/wjst/docs/loaders/">Template Loaders</a>
-            </li>
-            <li>
-              <a href="/wjst/docs/cli/">Command-Line</a>
-
-              <ol>
-                <li><a href="#install">Installation</a></li>
-                <li><a href="#usage">Usage</a></li>
-                <li><a href="#examples">Examples</a></li>
-              </ol>
-            </li>
-            <li>
-              <a href="/wjst/docs/browser/">Browser Usage</a>
-            </li>
-            <li>
-              <a href="/wjst/docs/extending/">Extending Wjst</a>
-            </li>
-          </ol>
-        </nav>
-      </div>
+        <p>Make your template an AMD module:</p>
+        <pre><code data-language="sh">$ wjst compile ./index.html --wrap-start="define(function () { return " --wrap-end="; });"</code></pre>
+      </section>
     </div>
 
-    <footer class="content">
-      <hr class="small" />
-      <p>
-        Wjst is copyright &copy;2016
-        <a href="http://paularmstrongdesigns.com">Paul Armstrong</a>, licensed
-        for use under the permissive MIT Open Source License.
-      </p>
-      <a class="forkme" href="https://github.com/paularmstrong/swig"
-        >Fork me on GitHub</a
-      >
-    </footer>
+    <div class="span3">
+      <nav>
+        <ol class="sidenav">
+          <li>
+            <a href="/wjst/docs/">Getting Started</a>
+          </li>
+          <li>
+            <a href="/wjst/docs/api/">Wjst API</a>
+          </li>
+          <li>
+            <a href="/wjst/docs/filters/">Filters</a>
+          </li>
+          <li>
+            <a href="/wjst/docs/tags/">Tags</a>
+          </li>
+          <li>
+            <a href="/wjst/docs/loaders/">Template Loaders</a>
+          </li>
+          <li>
+            <a href="/wjst/docs/cli/">Command-Line</a>
 
-    <script src="/wjst/js/lib/rainbow.min.js"></script>
-    <script src="/wjst/js/master.js"></script>
-  </body>
+            <ol>
+              <li><a href="#install">Installation</a></li>
+              <li><a href="#usage">Usage</a></li>
+              <li><a href="#examples">Examples</a></li>
+            </ol>
+          </li>
+          <li>
+            <a href="/wjst/docs/browser/">Browser Usage</a>
+          </li>
+          <li>
+            <a href="/wjst/docs/extending/">Extending Wjst</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <footer class="content">
+    <hr class="small" />
+    <p>
+      Wjst is copyright &copy;2022
+      <a href="http://paularmstrongdesigns.com">Honchar Denys</a>, licensed
+      for use under the permissive MIT Open Source License.
+    </p>
+    <a class="forkme" href="https://github.com/paularmstrong/swig">Fork me on GitHub</a>
+  </footer>
+
+  <script src="/wjst/js/lib/rainbow.min.js"></script>
+  <script src="/wjst/js/master.js"></script>
+</body>
+
 </html>
