@@ -78,8 +78,8 @@
             Now, you are ready to render a template in-browser that can extend
             <samp>myfile.html</samp>
           </p>
-          <pre><code data-language="js">let tpl = '{% extends "./myfile.html" %}{% block content %}{{ stuff }}{% endblock %}';
-let output = wjst.render(tpl, { filename: '/tpl', locals: { stuff: 'awesome' }});
+          <pre><code data-language="js">const tpl = '{% extends "./myfile.html" %}{% block content %}{{ stuff }}{% endblock %}';
+const output = wjst.render(tpl, { filename: '/tpl', locals: { stuff: 'awesome' }});
 document.querySelector('#foo').innerHTML = output;</code></pre>
         </li>
       </ol>

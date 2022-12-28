@@ -142,7 +142,7 @@ wjst.setDefaults({ loader: wjst.loaders.fs(__dirname + &#39;/templates&#39; )});
             </tbody>
           </table>
 
-          <pre><code data-language="js">let templates = {
+          <pre><code data-language="js">const templates = {
   &quot;layout&quot;: &quot;{% block content %}{% endblock %}&quot;,
   &quot;home.html&quot;: &quot;{% extends &#39;layout.html&#39; %}{% block content %}...{% endblock %}&quot;
 };
@@ -253,10 +253,10 @@ wjst.setDefaults({ loader: wjst.loaders.memory(templates) });</code></pre>
         <h4>Examples</h4>
 
         <pre><code data-language="js">// A theoretical memcached loader
-let path = require(&#39;path&#39;),
+const path = require(&#39;path&#39;),
   Memcached = require(&#39;memcached&#39;);
 function memcachedLoader(locations, options) {
-  let memcached = new Memcached(locations, options);
+  const memcached = new Memcached(locations, options);
   return {
     resolve: function (to, from) {
       return path.resolve(from, to);

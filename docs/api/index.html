@@ -314,8 +314,8 @@ wjst.setDefaults({ loader: wjst.loaders.memory({
 
         <h3>Examples</h3>
 
-        <pre><code data-language="js">let wjst = require(&#39;wjst&#39;);
-let mywjst = new wjst.Wjst({varControls: [&#39;&lt;%=&#39;, &#39;%&gt;&#39;]});
+        <pre><code data-language="js">const wjst = require(&#39;wjst&#39;);
+const mywjst = new wjst.Wjst({varControls: [&#39;&lt;%=&#39;, &#39;%&gt;&#39;]});
 mywjst.render(&#39;Tacos are &lt;%= tacos =&gt;!&#39;, { locals: { tacos: &#39;delicious&#39; }});
 // =&gt; Tacos are delicious!
 wjst.render(&#39;Tacos are &lt;%= tacos =&gt;!&#39;, { locals: { tacos: &#39;delicious&#39; }});
@@ -478,7 +478,7 @@ wjst.setFilter(&#39;replaceMs&#39;, replaceMs);
         <p><samp data-language="js">undefined</samp>:</p>
 
         <h3>Examples</h3>
-        <pre><code data-language="js">let tacotag = require(&#39;./tacotag&#39;);
+        <pre><code data-language="js">const tacotag = require(&#39;./tacotag&#39;);
 wjst.setTag(&#39;tacos&#39;, tacotag.parse, tacotag.compile, tacotag.ends, tacotag.blockLevel);
 // =&gt; {% tacos %}Make this be tacos.{% endtacos %}
 // =&gt; Tacos tacos tacos tacos.</code></pre>
@@ -780,7 +780,7 @@ In order to render a pre-compiled template, you must have access to filters and 
         </p>
 
         <h3>Examples</h3>
-        <pre><code data-language="js">let tpl = wjst.compile(&#39;{{ tacos }}&#39;);
+        <pre><code data-language="js">const tpl = wjst.compile(&#39;{{ tacos }}&#39;);
 // =&gt; {
 //      [Function: compiled]
 //      parent: null,
@@ -851,7 +851,7 @@ When compiling a source string, a file path should be specified in the options o
         </p>
 
         <h3>Examples</h3>
-        <pre><code data-language="js">let tpl = wjst.compileFile(&#39;./mytpl.html&#39;);
+        <pre><code data-language="js">const tpl = wjst.compileFile(&#39;./mytpl.html&#39;);
 // =&gt; {
 //      [Function: compiled]
 //      parent: null,
