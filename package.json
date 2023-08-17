@@ -52,12 +52,14 @@
     "license": "MIT",
     "main": "index",
     "engines": {
-        "node": ">=0.10.0"
+        "node": ">=16.20.2"
     },
     "bin": {
-        "swig": "./bin/swig.js"
+        "swig": "./bin/swig.js",
+        "wjst": "./index.js"
     },
     "scripts": {
+		"build": "tsc",
         "commitmsg": "commitlint -E GIT_PARAMS",
         "copy": "copyfiles -u 1 'docs/**/*.{ico,css,js}' build/",
         "docs": "parallelshell 'live-server build/' 'rerun-script'",

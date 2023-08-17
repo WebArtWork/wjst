@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var swig = require('../index')
+var swig = require('../lib/swig')
 var optimist = require('optimist')
 var fs = require('fs')
 var path = require('path')
