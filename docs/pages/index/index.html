@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Welcome to waw Template</title>
-	<meta itemprop="name" content="Welcome to waw Template">
-	<meta name="twitter:title" content="Welcome to waw Template">
-	<meta property="og:title" content="Welcome to waw Template" />
-
-	<meta name="description" content="Description which will fit on all pages">
-	<meta itemprop="description" content="Description which will fit on all pages">
-	<meta name="twitter:description" content="Description which will fit on all pages">
-	<meta property="og:description" content="Description which will fit on all pages" />
-
-	<meta itemprop="image" content="https://webartwork.github.io/wjst/img/avatar.png">
-	<meta name="twitter:image:src" content="https://webartwork.github.io/wjst/img/avatar.png">
-	<meta property="og:image" content="https://webartwork.github.io/wjst/img/avatar.png" />
-
-	<link rel="icon" type="image/x-icon" href="/wjst/img/favicon.ico">
-	<meta name="keywords" content="waw, web art work, server render, template">
-
-	<base href="/">
-	<link rel="stylesheet" href="/wjst/css/index.css">
-	<style>
-		:root {
-			--primary_color: #e0dc10;
-		}
-	</style>
-</head>
-<body>
-	<div class="template">
+<div class="template">
 	<img class="template-avatar" src="/wjst/img/avatar.png" alt="" />
 	<div class="template-title">Welcome to WAW Template</div>
 	<div class="template-readme">
@@ -71,31 +40,40 @@
 	<div class="template-readme">
 		<div class="template-readme__title">Prefix:</div>
 		<div class="template-readme__item">
-			Prefix which we have in template.json serve as root id for the template
+			Prefix which we have in template.json serve as root id for the
+			template
 		</div>
 		<div class="template-readme__item">
 			For example file
 			<span class="template-readme__code">img/avatar.png</span>
 			can be served in html
-			<span class="template-readme__code">src="/wjst/img/avatar.png"</span>
+			<span class="template-readme__code"
+				>src="/wjst/img/avatar.png"</span
+			>
 			were our path is
 			<span class="template-readme__code">{prefix}{path}</span>
 		</div>
 		<div class="template-readme__item">
-			Prefix should be unique on project where we have more then one template to serve files properly
+			Prefix should be unique on project where we have more then one
+			template to serve files properly
 		</div>
 		<div class="template-readme__item">
-			To change prefix, you need simply to replace all in editor phrase `/wjst` into new prefix `/newPrefixName`
+			To change prefix, you need simply to replace all in editor phrase
+			`/wjst` into new prefix `/newPrefixName`
 		</div>
 		<div class="template-readme__item">
-			To get served template by github pages, you simply have to replace prefix to name of the repo and do
+			To get served template by github pages, you simply have to replace
+			prefix to name of the repo and do
 			<span class="template-readme__code">waw build</span>
 			and then commit to branch which you set in settings > pages
 			<span class="template-readme__code">{repo}/settings/pages</span>
+			and after that you should able to see your wesite online, similar
+			this default repo is shown
+			<a
+				class="template-readme__link"
+				href="https://webartwork.github.io/wjst/"
+				>webartwork.github.io/wjst</a
+			>
 		</div>
 	</div>
 </div>
-
-	<script src="/wjst/js/index.js"></script>
-</body>
-</html>
