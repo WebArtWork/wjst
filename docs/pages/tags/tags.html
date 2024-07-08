@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="/wjst/assets/images/favicon.png" rel="icon" />
+  <title>Documentation | Your ThemeForest item Name</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet ============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/css/stylesheet.css" />
+
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/sass/bootstrap/_reboot.scss" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper =============================== -->
+  <div id="main-wrapper">
+
+    <!-- Header ============================ -->
+    <header id="header" class="sticky-top">
+      <!-- Navbar -->
+      <nav class="primary-menu navbar navbar-expand-lg bg-dark-1 navbar-text-light">
+        <div class="container-fluid">
+          <!-- Sidebar Toggler -->
+          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span
+              class="w-75"></span><span class="w-50"></span></button>
+
+          <!-- Logo -->
+          <a class="logo ml-md-3" href="/" title="WAW">
+            <img src="/wjst/assets/images/spider-logo-v2.svg" alt="WAW" width="45" />
+          </a>
+
+          <span class="text-2 ml-3">Wjst - A Node.js and Browser JavaScript Template Engine</span>
+          <!-- Logo End -->
+
+          <!-- Navbar Toggler -->
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#header-nav"><span></span><span></span><span></span></button>
+
+          <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li><a href="/">Home</a></li>
+            </ul>
+          </div>
+          <ul class="social-icons social-icons-lg ml-lg-2 mr-2">
+            <li class="social-icons-github">
+              <a data-toggle="tooltip" href="https://github.com/WebArtWork/wjst" target="_blank" title=""
+                data-original-title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Content ============================ -->
+    <div id="content" role="main">
+      <!-- Sidebar Navigation ============================ -->
+      <div class="idocs-navigation bg-dark-1 docs-navigation-dark">
+        <ul class="nav flex-column ">
+
+          <li class="nav-item"><a class="nav-link" href="/doc">Getting Started</a>
+
+          <li class="nav-item"><a class="nav-link" href="/api">Wjst API</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_object_wjstopts">Object: WjstOpts</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_object_cacheoptions">Object: CacheOptions</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_object_templateLoader">Object: TemplateLoader</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_version">wjst.version</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setDefaults">wjst.setDefaults</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setDefaultTZOffset">wjst.setDefaultTZOffset</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_Wjst">wjst.Wjst</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_invalidateCache">wjst.invalidateCache</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setFilter">wjst.setFilter</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setTag">wjst.setTag</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setExtension">wjst.setExtension</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_precompile">wjst.precompile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_render">wjst.render</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_renderFile">wjst.renderFile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_compile">wjst.compile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_compileFile">wjst.compileFile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_run">wjst.run</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/filters">Filters</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_addslashes">addslashes</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_capitalize">capitalize</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_date">date</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_default">default</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_escape">escape</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_first">first</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_groupBy">groupBy</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_join">join</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_json">json</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_last">last</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_length">length</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_lower">lower</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_raw">raw</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_replace">replace</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_reverse">reverse</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_safe">safe</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_sort">sort</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_striptags">striptags</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_title">title</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_uniq">uniq</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_upper">upper</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_url_encode">url_encode</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_url_decode">url_decode</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link active" href="#idocs_Tags">Tags</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_autoescape">autoescape</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_block">block</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_else">else</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_elif">elif</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_extends">extends</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_filter">filter</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_for">for</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_if">if</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_import">import</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_include">include</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_macro">macro</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_parent">parent</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_raw_tag">raw</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_set">set</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_spaceless">spaceless</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/loaders">Template Loaders</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_builtin">Built-Ins</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_custom_loaders">Custom Loaders</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_resolve">resolve</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_load">load</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/cli">Command-Line</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_installation_2">Installation</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_usage">Usage</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_examples">Examples</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/browser">Browser Usage</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="/extending">Extending Wjst</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_custom_filters">Custom Filters</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_custom_tags">Custom Tags</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_parse">parse</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_compile">compile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_ends">ends</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_blockLevel">blockLevel</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_token_types">Token Types</a></li>
+            </ul> -->
+          </li>
+        </ul>
+      </div>
+
+      <!-- Docs Content ============================ -->
+      <div class="idocs-content bg-dark-1">
+        <div class="container">
+
+          <!-- Getting Started ============================ -->
+          <section id="idocs_Tags">
+            <h1>Tags</h1>
+          </section>
+
+          <!------------------ idocs_autoescape ------------------>
+          <section id="idocs_autoescape">
+            <h2>autoescape</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/autoescape.js">lib/tags/autoescape.js</a></p>
+            <p>Control auto-escaping of variable output from within your templates.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Optional</th>
+                    <th scope="col">Default</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row"><code class="JavaScript">control</code></td>
+                    <td scope="row"><code class="JavaScript">boolean or string</code></td>
+                    <td></td>
+                    <td scope="row"><code class="JavaScript">undefined</code></td>
+                    <td>One of `true`, `false`, `"js"` or `"html"`.</td>
+                  </tr>
+                </tbody>
+              </table>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{%raw%}// myvar = '&lt;foo&gt;';
+{% autoescape true %}{{ myvar }}{% endautoescape %}
+// => &lt;foo&gt;
+{% autoescape false %}{{ myvar }}{% endautoescape %}
+// => &lt;foo&gt;{%endraw%}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_block ------------------>
+          <section id="idocs_block">
+            <h2>block</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/block.js"> lib/tags/block.js</a></p>
+            <p>Defines a block in a template that can be overridden by a template extending this one and/or will override the current template's parent template block of the same name.</p>
+            <p>See Template Inheritance for more information.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Optional</th>
+                    <th scope="col">Default</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row"><code class="JavaScript">name</code></td>
+                    <td scope="row"><code class="JavaScript">literal</code></td>
+                    <td></td>
+                    <td scope="row"><code class="JavaScript">undefined</code></td>
+                    <td>Name of the block for use in parent and extended templates.</td>
+                  </tr>
+                </tbody>
+              </table>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{%raw%}{% block body %}...{% endblock %}{%endraw%}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_else ------------------>
+          <section id="idocs_else">
+            <h2>else</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/else.js"> lib/tags/else.js</a></p>
+            <p>Used within an <code class="JavaScript">{%raw%}{% if %}{%endraw%}</code> tag, the code block following this tag up until <code class="JavaScript">{%raw%}{% endif %}{%endraw%}</code> will be rendered if the if statement returns false.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% if false %}
+  statement1
+{% else %}
+  statement2
+{% endif %}
+// => statement2{% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_elif ------------------>
+          <section id="idocs_elif">
+            <h2>elif</h2>
+            <h2>date(format, offset, abbr)</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/elseif.js">lib/tags/elseif.js</a></p>
+            <p>Like <code class="JavaScript">{%raw%}{% else %}{%endraw%}</code>, except this tag can take more conditional statements.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">conditional</code></td>
+                  <td scope="row"><code class="JavaScript">mixed</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Conditional statement that returns a truthy or falsy value.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% if false %}
+  Tacos
+{% elseif true %}
+  Burritos
+{% else %}
+  Churros
+{% endif %}
+// => Burritos{% endraw %}</code></pre>
+            </section>
+          <hr class="divider">
+
+          <!------------------ idocs_extends ------------------>
+          <section id="idocs_extends">
+            <h2>extends</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/extends.js">lib/tags/extends.js</a></p>
+            <p>Makes the current template extend a parent template. This tag must be the first item in your template.</p>
+            <p>See Template Inheritance for more information.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">parentFile</code></td>
+                  <td scope="row"><code class="JavaScript">string</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Relative path to the file that this template extends.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+           <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% extends "./layout.html" %}{% endraw %}</code></pre>
+            </section>
+          <hr class="divider">
+
+          <!------------------ idocs_filter ------------------>
+          <section id="idocs_filter">
+            <h2>filter</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/filter.js">lib/tags/filter.js</a></p>
+            <p>Apply a filter to an entire block of template.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">filter</code></td>
+                  <td scope="row"><code class="JavaScript">function</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>The filter that should be applied to the contents of the tag.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% filter uppercase %}oh hi, {{ name }}{% endfilter %}
+// => OH HI, PAUL{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}{% filter replace(".", "!", "g") %}Hi. My name is Paul.{% endfilter %}
+// => Hi! My name is Paul!{% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_for ------------------>
+          <section id="idocs_for">
+            <h2>for</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/for.js">lib/tags/for.js</a></p>
+            <p>Loop over objects and arrays.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">key</code></td>
+                  <td scope="row"><code class="JavaScript">literal</code></td>
+                  <td>✓</td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>A shortcut to the index of the array or current key accessor.</td>
+                </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td scope="row"><code class="JavaScript">variable</code></td>
+                    <td scope="row"><code class="JavaScript">literal</code></td>
+                    <td></td>
+                    <td scope="row"><code class="JavaScript">undefined</code></td>
+                    <td>The current value will be assigned to this variable name temporarily. The variable will be reset upon ending the for tag.</td>
+                  </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td scope="row"><code class="JavaScript">in</code></td>
+                    <td scope="row"><code class="JavaScript">literal</code></td>
+                    <td></td>
+                    <td scope="row"><code class="JavaScript">undefined</code></td>
+                    <td>Literally, "in". This token is required.</td>
+                  </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td scope="row"><code class="JavaScript">object</code></td>
+                    <td scope="row"><code class="JavaScript">object</code></td>
+                    <td></td>
+                    <td scope="row"><code class="JavaScript">undefined</code></td>
+                    <td>An enumerable object that will be iterated over.</td>
+                  </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">loop.index</code>:The current iteration of the loop (1-indexed)</p>
+            <p><code class="JavaScript">loop.index0</code>:The current iteration of the loop (0-indexed)</p>
+            <p><code class="JavaScript">loop.revindex</code>:The number of iterations from the end of the loop (1-indexed)</p>
+            <p><code class="JavaScript">loop.revindex0</code>:The number of iterations from the end of the loop (0-indexed)</p>
+            <p><code class="JavaScript">loop.key</code>:If the iterator is an object, this will be the key of the current item, otherwise it will be the same as the loop.index.</p>
+            <p><code class="JavaScript">loop.first</code>:True if the current object is the first in the object or array.</p>
+            <p><code class="JavaScript">loop.last</code>:True if the current object is the last in the object or array.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}/// obj = { one: 'hi', two: 'bye' };
+{% for x in obj %}
+  {% if loop.first %}&lt;ul>{% endif %}
+    &lt;li>{{ loop.index }} - {{ loop.key }}: {{ x }}&lt;/li>
+  {% if loop.last %}&lt;/ul>{% endif %}
+{% endfor %}
+// => &lt;ul>
+//    &lt;li>1 - one: hi&lt;/li>
+//    &lt;li>2 - two: bye&lt;/li>
+//    &lt;/ul>{% endraw %}</code></pre>
+              <pre><code class="JavaScript">{% raw %}// arr = [1, 2, 3]
+// Reverse the array, shortcut the key/index to `key`
+{% for key, val in arr|reverse %}
+{{ key }} -- {{ val }}
+{% endfor %}
+// => 0 -- 3
+//    1 -- 2
+//    2 -- 1{% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_if ------------------>
+          <section id="idocs_if">
+            <h2>if</h2>
+            <p class="small-font">Sourse: <a href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/if.js">lib/tags/if.js</a></p>
+            <p>Used to create conditional statements in templates. Accepts most JavaScript valid comparisons.</p>
+            <p>Can be used in conjunction with <code class="JavaScript">{%raw%}{% elseif ... %}{%endraw%}</code> and <code class="JavaScript">{%raw%}{% else %}{%endraw%}</code> tags.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">conditional</code></td>
+                  <td scope="row"><code class="JavaScript">mixed</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Conditional statement that returns a truthy or falsy value.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+           <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% if x %}{% endif %}
+{% if !x %}{% endif %}
+{% if not x %}{% endif %}{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}{% if x and y %}{% endif %}
+{% if x && y %}{% endif %}
+{% if x or y %}{% endif %}
+{% if x || y %}{% endif %}
+{% if x || (y && z) %}{% endif %}{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}{% if x [operator] y %}
+  Operators: ==, !=, &lt;, &lt;=, &gt;, &gt;=, ===, !==
+{% endif %}{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}{% if x == 'five' %}
+  The operands can be also be string or number literals
+{% endif %}{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}{% if x|lower === 'tacos' %}
+  You can use filters on any operand in the statement.
+{% endif %}{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}{% if x in y %}
+  If x is a value that is present in y, this will return true.
+{% endif %}{% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_import ------------------>
+          <section id="idocs_import">
+            <h2>import</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/import.js">lib/tags/import.js</a></p>
+            <p>Allows you to import macros from another file directly into your current context.</p>
+            <p>The import tag is specifically designed for importing macros into your template with a specific context scope. This is very useful for keeping your macros from overriding template context that is being injected by your server-side page generation.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">file</code></td>
+                  <td scope="row"><code class="JavaScript">string or var</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Relative path from the current template file to the file to import macros from.</td>
+                </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td scope="row"><code class="JavaScript">as</code></td>
+                    <td scope="row"><code class="JavaScript">literal</code></td>
+                    <td></td>
+                    <td scope="row"><code class="JavaScript">undefined</code></td>
+                    <td>Literally, "as".</td>
+                  </tr>
+                </tr>
+                  <tr>
+                    <tr>
+                      <td scope="row"><code class="JavaScript">file</code></td>
+                      <td scope="row"><code class="JavaScript">literal</code></td>
+                      <td></td>
+                      <td scope="row"><code class="JavaScript">undefined</code></td>
+                      <td>Local-accessible object name to assign the macros to.</td>
+                    </tr>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+           <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% import './formmacros.html' as form %}
+{{ form.input("text", "name") }}
+// => &lt;input type="text" name="name">{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}{% import "../shared/tags.html" as tags %}
+{{ tags.stylesheet('global') }}
+// => &lt;link rel="stylesheet" href="/global.css">{% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_include ------------------>
+          <section id="idocs_include">
+            <h2>include</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/include.js">lib/tags/include.js</a></p>
+            <p>Includes a template partial in place. The template is rendered within the current locals variable context.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">file</code></td>
+                  <td scope="row"><code class="JavaScript">string or var</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>The path, relative to the template root, to render into the current context.</td>
+                </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td scope="row"><code class="JavaScript">with</code></td>
+                    <td scope="row"><code class="JavaScript">literal</code></td>
+                    <td>✓</td>
+                    <td scope="row"><code class="JavaScript">undefined</code></td>
+                    <td>Literally, "with".</td>
+                  </tr>
+                </tr>
+                  <tr>
+                    <tr>
+                      <td scope="row"><code class="JavaScript">context</code></td>
+                      <td scope="row"><code class="JavaScript">object</code></td>
+                      <td>✓</td>
+                      <td scope="row"><code class="JavaScript">undefined</code></td>
+                      <td>Local variable key-value object context to provide to the included file.</td>
+                    </tr>
+                  </tr>
+                  <tr>
+                    <tr>
+                      <td scope="row"><code class="JavaScript">only</code></td>
+                      <td scope="row"><code class="JavaScript">literal</code></td>
+                      <td>✓</td>
+                      <td scope="row"><code class="JavaScript">undefined</code></td>
+                      <td>Restricts to only passing the with context as local variables–the included template will not be aware of any other local variables in the parent template. For best performance, usage of this option is recommended if possible.</td>
+                    </tr>
+                  </tr>
+                  <tr>
+                    <tr>
+                      <td scope="row"><code class="JavaScript">ignore missing</code></td>
+                      <td scope="row"><code class="JavaScript">literal</code></td>
+                      <td>✓</td>
+                      <td scope="row"><code class="JavaScript">undefined</code></td>
+                      <td>Will output empty string if not found instead of throwing an error.</td>
+                    </tr>
+                  </tr>
+              </tbody>
+            </table>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}// food = 'burritos';
+// drink = 'lemonade';
+{% include "./partial.html" %}
+// => I like burritos and lemonade.{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}// my_obj = { food: 'tacos', drink: 'horchata' };
+{% include "./partial.html" with my_obj only %}
+// => I like tacos and horchata.{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}{% include "/this/file/does/not/exist" ignore missing %}
+// => (Nothing! empty string){% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_macro ------------------>
+          <section id="idocs_macro">
+            <h2>macro</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/macro.js">lib/tags/macro.js</a></p>
+            <p>Create custom, reusable snippets within your templates.</p>
+            <p>Can be imported from one template to another using the <code class="JavaScript">{% raw %}{% import ... %}{% endraw %}</code> tag.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">arguments</code></td>
+                  <td scope="row"><code class="JavaScript">arguments</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>User-defined arguments.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+           <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% macro input(type, name, id, label, value, error) %}
+ &lt;label for="{{ name }}"&gt;{{ label }}&lt;/label&gt;
+  &lt;input type="{{ type }}" name="{{ name }}" id="{{ id }}" value="{{ value }}"{% if error %} class="error"{% endif %}&gt;
+{% endmacro %}
+            
+{{ input("text", "fname", "fname", "First Name", fname.value, fname.errors) }}
+// => &lt;label for="fname">First Name&lt;/label&gt;
+//    &lt;input type="text" name="fname" id="fname" value=""&gt;{% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_parent ------------------>
+          <section id="idocs_parent">
+            <h2>parent</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/parent.js">lib/tags/parent.js</a></p>
+            <p>Inject the content from the parent template's block of the same name into the current block.</p>
+            <p>See Template Inheritance for more information.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% extends "./foo.html" %}
+{% block content %}
+  My content.
+  {% parent %}
+{% endblock %}{% endraw %}</code></pre>
+           </section>
+          <hr class="divider">
+
+          <!------------------ idocs_raw_tag ------------------>
+          <section id="idocs_raw_tag">
+            <h2>raw</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/raw.js">lib/tags/raw.js</a></p>
+            <p>Forces the content to not be auto-escaped. All wjst instructions will be ignored and the content will be rendered exactly as it was given.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}// foobar = '&lt;p&gt;'
+&#123;% raw %&#125;{{ foobar }}&#123;% endraw %&#125;
+// => {{ foobar }}{% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_set ------------------>
+          <section id="idocs_set">
+            <h2>set</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/set.js">lib/tags/set.js</a></p>
+            <p>Set a variable for re-use in the current context. This will over-write any value already set to the context for the given <code class="JavaScript">varname</code>.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">varname</code></td>
+                  <td scope="row"><code class="JavaScript">literal</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>The variable name to assign the value to.</td>
+                </tr>
+                </tr>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">assignement</code></td>
+                  <td scope="row"><code class="JavaScript">literal</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Any valid JavaScript assignement. <code class="JavaScript">=, +=, *=, /=, -=</code></td>
+                </tr>
+                </tr>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">value</code></td>
+                  <td scope="row"><code class="JavaScript">*</code></td>
+                  <td>✓</td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Valid variable output.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">string</code>:Replaced string.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% set foo = "anything!" %}
+{{ foo }}
+// => anything!{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}// index = 2;
+{% set bar = 1 %}
+{% set bar += index|default(3) %}
+// => 3{% endraw %}</code></pre>
+            <pre><code class="JavaScript">{% raw %}// foods = {};
+// food = &apos;chili&apos;;
+{% set foods[food] = "con queso" %}
+{{ foods.chili }}
+// => con queso{% endraw %}</code></pre>
+              <pre><code class="JavaScript">{% raw %}// foods = { chili: &apos;chili con queso&apos; }
+{% set foods.chili = "guatamalan insanity pepper" %}
+{{ foods.chili }}
+// => guatamalan insanity pepper{% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_spaceless ------------------>
+          <section id="idocs_spaceless">
+            <h2>spaceless</h2>
+            <p class="small-font">Sourse: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/tags/spaceless.js"> lib/tags/spaceless.js</a></p>
+            <p>Attempts to remove whitespace between HTML tags. Use at your own risk.</code></p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{% raw %}{% spaceless %}
+  {% for num in foo %}
+  &lt;li&gt;{{ loop.index }}&lt;/li&gt;
+  {% endfor %}
+{% endspaceless %}
+// => &lt;li&gt;1&lt;/li&gt;&lt;li&gt;2&lt;/li&gt;&lt;li&gt;3&lt;/li&gt;{% endraw %}</code></pre>
+          </section>
+          <hr class="divider">
+        </div>
+      </div>
+    </div>
+    <!-- Content end -->
+
+    <!-- Footer ============================ -->
+    <footer id="footer" class="section bg-dark-1 footer-text-light">
+      <div class="container">
+        <!-- <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+          <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+              data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+              data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+              data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+              data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+        </ul> -->
+        <p class="text-center">Wjst is copyright &copy;2022 <a href="https://webart.work/sign"> Honchar Denys</a>,
+          licensed for use under the permissive MIT Open Source License.</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript ============================ -->
+  <script src="/wjst/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/wjst/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="/wjst/assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="/wjst/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="/wjst/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="/wjst/assets/js/theme.js"></script>
+</body>
+
+</html>

@@ -20,16 +20,11 @@
 	<link rel="icon" type="image/x-icon" href="{{{favicon}}}">
 	<meta name="keywords" content="{{{keywords}}}">
 
-	<base href="/">
-	<link rel="stylesheet" href="/wjst/css/index.css">
-	<style>
-		:root {
-			--primary_color: {{{variables.primary_color || "#e0dc10"}}};
-		}
-	</style>
+	<base href="{{{base || prefix + '/'}}}" />
+	<link rel="stylesheet" href="/docs/css/index.css">
 </head>
 <body>
 	<!-- HTML -->
-	<script src="/wjst/js/index.js"></script>
+	<script src="/docs/js/scribbler.js"></script>
 </body>
 </html>

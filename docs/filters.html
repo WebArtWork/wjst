@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Title which will fit on all pages</title>
+	<meta itemprop="name" content="Title which will fit on all pages">
+	<meta name="twitter:title" content="Title which will fit on all pages">
+	<meta property="og:title" content="Title which will fit on all pages" />
+
+	<meta name="description" content="Description which will fit on all pages">
+	<meta itemprop="description" content="Description which will fit on all pages">
+	<meta name="twitter:description" content="Description which will fit on all pages">
+	<meta property="og:description" content="Description which will fit on all pages" />
+
+	<meta itemprop="image" content="https://webartwork.github.io/wjst/img/avatar.png">
+	<meta name="twitter:image:src" content="https://webartwork.github.io/wjst/img/avatar.png">
+	<meta property="og:image" content="https://webartwork.github.io/wjst/img/avatar.png" />
+
+	<link rel="icon" type="image/x-icon" href="/wjst/img/favicon.ico">
+	<meta name="keywords" content="waw, web art work, server render, template">
+
+	<base href="/" />
+	<link rel="stylesheet" href="/docs/css/index.css">
+</head>
+<body>
+	<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="/wjst/assets/images/favicon.png" rel="icon" />
+  <title>Documentation | Your ThemeForest item Name</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet ============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/highlight.js/styles/hybrid.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/css/stylesheet.css" />
+
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/sass/bootstrap/_reboot.scss" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper =============================== -->
+  <div id="main-wrapper">
+
+    <!-- Header ============================ -->
+    <header id="header" class="sticky-top">
+      <!-- Navbar -->
+      <nav class="primary-menu navbar navbar-expand-lg bg-dark-1 navbar-text-light">
+        <div class="container-fluid">
+          <!-- Sidebar Toggler -->
+          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span
+              class="w-75"></span><span class="w-50"></span></button>
+
+          <!-- Logo -->
+          <a class="logo ml-md-3" href="/" title="WAW">
+            <img src="/wjst/assets/images/spider-logo-v2.svg" alt="WAW" width="45" />
+          </a>
+
+          <span class="text-2 ml-3">Wjst - A Node.js and Browser JavaScript Template Engine</span>
+          <!-- Logo End -->
+
+          <!-- Navbar Toggler -->
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#header-nav"><span></span><span></span><span></span></button>
+
+          <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li><a href="/">Home</a></li>
+            </ul>
+          </div>
+          <ul class="social-icons social-icons-lg ml-lg-2 mr-2">
+            <li class="social-icons-github">
+              <a data-toggle="tooltip" href="https://github.com/WebArtWork/wjst" target="_blank" title=""
+                data-original-title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Content ============================ -->
+    <div id="content" role="main">
+      <!-- Sidebar Navigation ============================ -->
+      <div class="idocs-navigation bg-dark-1 docs-navigation-dark">
+        <ul class="nav flex-column ">
+          <li class="nav-item"><a class="nav-link" href="/doc">Getting Started</a>
+          <li class="nav-item"><a class="nav-link" href="/api">Wjst API</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_object_wjstopts">Object: WjstOpts</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_object_cacheoptions">Object: CacheOptions</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_object_templateLoader">Object: TemplateLoader</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_version">wjst.version</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setDefaults">wjst.setDefaults</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setDefaultTZOffset">wjst.setDefaultTZOffset</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_Wjst">wjst.Wjst</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_invalidateCache">wjst.invalidateCache</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setFilter">wjst.setFilter</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setTag">wjst.setTag</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setExtension">wjst.setExtension</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_precompile">wjst.precompile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_render">wjst.render</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_renderFile">wjst.renderFile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_compile">wjst.compile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_compileFile">wjst.compileFile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_run">wjst.run</a></li>
+            </ul> -->
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="#idocs_Filters">Filters</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_addslashes">addslashes</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_capitalize">capitalize</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_date">date</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_default">default</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_escape">escape</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_first">first</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_groupBy">groupBy</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_join">join</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_json">json</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_last">last</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_length">length</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_lower">lower</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_raw">raw</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_replace">replace</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_reverse">reverse</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_safe">safe</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_sort">sort</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_striptags">striptags</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_title">title</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_uniq">uniq</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_upper">upper</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_url_encode">url_encode</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_url_decode">url_decode</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/tags">Tags</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_autoescape">autoescape</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_block">block</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_else">else</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_elif">elif</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_extends">extends</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_filter">filter</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_for">for</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_if">if</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_import">import</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_include">include</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_macro">macro</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_parent">parent</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_raw_tag">raw</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_set">set</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_spaceless">spaceless</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/loaders">Template Loaders</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_builtin">Built-Ins</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_custom_loaders">Custom Loaders</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_resolve">resolve</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_load">load</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/cli">Command-Line</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_installation_2">Installation</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_usage">Usage</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_examples">Examples</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/browser">Browser Usage</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="/extending">Extending Wjst</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_custom_filters">Custom Filters</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_custom_tags">Custom Tags</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_parse">parse</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_compile">compile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_ends">ends</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_blockLevel">blockLevel</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_token_types">Token Types</a></li>
+            </ul> -->
+          </li>
+        </ul>
+      </div>
+
+      <!-- Docs Content ============================ -->
+      <div class="idocs-content bg-dark-1">
+        <div class="container">
+
+          <!-- Getting Started ============================ -->
+          <section id="idocs_Filters">
+            <h1>Filters</h1>
+            <p>The rendering of variables can be modified by filters. Filters are special functions that are applied
+              after any object token in a variable block using the pipe character, for example: <code
+                class="JavaScript">{{ names|join(', ') }}</code>.</p>
+            <p>Filters can also be chained together, one after another. In this case, we have a list of names in HTML
+              tags that we want to remove, output together, and make title-cased:</p>
+            <pre><code class="JavaScript">// names = ['&lt;p>paul&lt;/p>', '&lt;p>jim&lt;/p>'];
+{{ names|striptags|join(', ')|title }}
+// => Paul, Jim</code></pre>
+            <p>Wjst comes pre-loaded with a set of useful filters:</p>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_addslashes ------------------>
+          <section id="idocs_addslashes">
+            <h2>addslashes</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L40">lib/wjst.js#L40</a></p>
+            <p>Backslash-escape characters that need to be escaped.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>Backslash-escaped string.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{{ "\"quoted string\""|addslashes }}
+// => \"quoted string\"</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_capitalize ------------------>
+          <section id="idocs_capitalize">
+            <h2>capitalize</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L59">lib/wjst.js#L59</a></p>
+            <p>Upper-case the first letter of the input and lower-case the rest.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>Returns the same type as the input.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{{ "i like Burritos"|capitalize }}
+// => I like burritos</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_date ------------------>
+          <section id="idocs_date">
+            <h2>date(format, offset, abbr)</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L86">lib/wjst.js#L86</a></p>
+            <p>Format a date or Date-compatible string.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Optional</th>
+                    <th scope="col">Default</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row"><code class="JavaScript">indent</code></td>
+                    <td scope="row"><code class="JavaScript">number</code></td>
+                    <td>✓</td>
+                    <td scope="row"><code class="JavaScript">undefined</code></td>
+                    <td>Number of spaces to indent for pretty-formatting.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">string</code> A valid JSON string.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// val = { a: 'b' }
+{{ val|json }}
+// => {"a":"b"}</code></pre>
+            <pre><code class="JavaScript">// val = { a: 'b' }
+{{ val|json(4) }}
+// => {
+//        "a": "b"
+//    }</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_default ------------------>
+          <section id="idocs_default">
+            <h2>wjst.version</h2>
+            <h2>date(format, offset, abbr)</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L86">lib/wjst.js#L86</a></p>
+            <p>Format a date or Date-compatible string.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">def</code></td>
+                  <td scope="row"><code class="JavaScript">*</code></td>
+                  <td>✓</td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Value to return if `input` is `undefined`, `null`, or `false`.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>: `input` or `def` value.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{{ null_value|default('Tacos') }}
+// => Tacos</code></pre>
+            <pre><code class="JavaScript">{{ "Burritos"|default("Tacos") }}
+// => Burritos</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_escape ------------------>
+          <section id="idocs_escape">
+            <h2>escape(type)</h2>
+            <h2>date(format, offset, abbr)</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L145">lib/wjst.js#L145</a></p>
+            <p>Force escape the output of the variable. Optionally use `e` as a shortcut filter name. This filter will
+              be applied by default if autoescape is turned on.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">type</code></td>
+                  <td scope="row"><code class="JavaScript">string</code></td>
+                  <td>✓</td>
+                  <td scope="row"><code class="JavaScript">'html'</code></td>
+                  <td>If you pass the string js in as the type, output will be escaped so that it is safe for JavaScript
+                    execution.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">string</code>:Escaped string.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{{ "<blah>"|escape }}
+// => <blah></code></pre>
+            <pre><code class="JavaScript">{{ "<blah>"|e("js") }}
+// => \u003Cblah\u003E</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_first ------------------>
+          <section id="idocs_first">
+            <h2>first</h2>
+            <h2>date(format, offset, abbr)</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L209">lib/wjst.js#L209</a></p>
+            <p>Get the first item in an array or character in a string. All other objects will attempt to return the
+              first value available.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:The first item of the array or first character of the
+              string input.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_arr = ['a', 'b', 'c']
+{{ my_arr|first }}
+// => a</code></pre>
+            <pre><code class="JavaScript">// my_val = 'Tacos'
+{{ my_val|first }}
+// T</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_groupBy ------------------>
+          <section id="idocs_groupBy">
+            <h2>groupBy(key)</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L240">lib/wjst.js#L240</a></p>
+            <p>Group an array of objects by a common key. If an array is not provided, the input value will be returned
+              untouched.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">key</code></td>
+                  <td scope="row"><code class="JavaScript">string</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Key to group by.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">object:</code>Grouped arrays by given key.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// people = [{ age: 23, name: 'Paul' }, { age: 26, name: 'Jane' }, { age: 23, name: 'Jim' }];
+{% for agegroup in people|groupBy('age') %}
+&lt;h2>{{ loop.key }}&lt;/h2>
+&lt;ul>
+    {% for person in agegroup %}
+    &lt;li>{{ person.name }}&lt;/li>
+    {% endfor %}
+    &lt;/ul>
+{% endfor %}</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_join ------------------>
+          <section id="idocs_join">
+            <h2>join(glue)</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L283">lib/wjst.js#L283</a></p>
+            <p>Join the input with a string.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">glue</code></td>
+                  <td scope="row"><code class="JavaScript">string</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>String value to join items together.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">string</code>:</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_array = ['foo', 'bar', 'baz']
+{{ my_array|join(', ') }}
+// => foo, bar, baz</code></pre>
+            <pre><code class="JavaScript">// my_key_object = { a: 'foo', b: 'bar', c: 'baz' }
+{{ my_key_object|join(' and ') }}
+// => foo and bar and baz</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_json ------------------>
+          <section id="idocs_json">
+            <h2>json(indent)</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L319">lib/wjst.js#L319</a></p>
+            <p>Return a string representation of an JavaScript object.</p>
+            <p>Backwards compatible with wjst@0.x.x using `json_encode`.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">indent</code></td>
+                  <td scope="row"><code class="JavaScript">number</code></td>
+                  <td>✓</td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Number of spaces to indent for pretty-formatting.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">string</code>:A valid JSON string.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// val = { a: 'b' }
+{{ val|json }}
+// => {"a":"b"}</code></pre>
+            <pre><code class="JavaScript">// val = { a: 'b' }
+{{ val|json(4) }}
+// => {
+//        "a": "b"
+//    }</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_last ------------------>
+          <section id="idocs_last">
+            <h2>last</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L340">lib/wjst.js#L340</a></p>
+            <p>Get the last item in an array or character in a string. All other objects will attempt to return the last
+              value available.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>The last item of the array or last character of the string.input.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_arr = ['a', 'b', 'c']
+{{ my_arr|last }}
+// => c</code></pre>
+            <pre><code class="JavaScript">// my_val = 'Tacos'
+{{ my_val|last }}
+// s</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_length ------------------>
+          <section id="idocs_length">
+            <h2>length</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L374">lib/wjst.js#L374</a></p>
+            <p>Get the number of items in an array, string, or object.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:The length of the input</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_arr = ['a', 'b', 'c']
+{{ my_arr|length }}
+// => 3</code></pre>
+            <pre><code class="JavaScript">// my_str = 'Tacos'
+{{ my_str|length }}
+// => 5</code></pre>
+            <pre><code class="JavaScript">// my_obj = {a: 5, b: 20}
+{{ my_obj|length }}
+// => 2</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_lower ------------------>
+          <section id="idocs_lower">
+            <h2>lower</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L400">lib/wjst.js#L400</a></p>
+            <p>Return the input in all lowercase letters.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:Returns the same type as the input.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">{{ "FOOBAR"|lower }}
+// => foobar</code></pre>
+            <pre><code class="JavaScript">// myObj = { a: 'FOO', b: 'BAR' }
+              {{ myObj|lower|join('') }}
+              // => foobar</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_raw ------------------>
+          <section id="idocs_raw">
+            <h2>raw</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L412">lib/wjst.js#L412</a></p>
+            <p>Deprecated in favor of safe.</p>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_replace ------------------>
+          <section id="idocs_replace">
+            <h2>replace(search, replacement, flags)</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L441">lib/wjst.js#L441</a></p>
+            <p>Returns a new string with the matched search pattern replaced by the given replacement string. Uses
+              JavaScript's built-in String.replace() method.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">search</code></td>
+                  <td scope="row"><code class="JavaScript">string</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>String or pattern to replace from the input.</td>
+                </tr>
+                </tr>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">replacement</code></td>
+                  <td scope="row"><code class="JavaScript">string</code></td>
+                  <td></td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>String to replace matched pattern.</td>
+                </tr>
+                </tr>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">flags</code></td>
+                  <td scope="row"><code class="JavaScript">string</code></td>
+                  <td>✓</td>
+                  <td scope="row"><code class="JavaScript">undefined</code></td>
+                  <td>Regular Expression flags. 'g': global match, 'i': ignore case, 'm': match over multiple lines.
+                  </td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">string</code>:Replaced string.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_var = 'foobar';
+{{ my_var|replace('o', 'e', 'g') }}
+// => feebar</code></pre>
+            <pre><code class="JavaScript">// my_var = "farfegnugen";
+{{ my_var|replace('^f', 'p') }}
+// => parfegnugen</code></pre>
+            <pre><code class="JavaScript">// my_var = 'a1b2c3';
+{{ my_var|replace('\w', '0', 'g') }}
+// => 010203</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_reverse ------------------>
+          <section id="idocs_reverse">
+            <h2>reverse</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L457">lib/wjst.js#L457</a></p>
+            <p>Reverse sort the input. This is an alias for <code class="JavaScript">{{ input|sort(true) }}.</code></p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">array</code>:Reversed array. The original input object is returned if it was not
+              an array.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// val = [1, 2, 3];
+{{ val|reverse }}
+// => 3,2,1</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_safe ------------------>
+          <section id="idocs_safe">
+            <h2>safe</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L472">lib/wjst.js#L472</a></p>
+            <p>Forces the input to not be auto-escaped. Use this only on content that you know is safe to be rendered on
+              your page.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:The input exactly how it was given, regardless of autoescaping status.
+            </p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_var = "<p>Stuff</p>";
+{{ my_var|safe }}
+// => <p>Stuff</p></code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_sort ------------------>
+          <section id="idocs_sort">
+            <h2>sort(reverse)</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L502">lib/wjst.js#L502</a></p>
+            <p>Sort the input in an ascending direction.</p>
+            <p>If given an object, will return the keys as a sorted array.</p>
+            <p>If given a string, each character will be sorted individually.</p>
+            <h3>Parameters</h3>
+            <div class="table-responsive">
+            <table class="table table-bordered table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Optional</th>
+                  <th scope="col">Default</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <tr>
+                  <td scope="row"><code class="JavaScript">reverse</code></td>
+                  <td scope="row"><code class="JavaScript">boolean</code></td>
+                  <td>✓</td>
+                  <td scope="row"><code class="JavaScript">false</code></td>
+                  <td>Output is given reverse-sorted if true.</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:Sorted array;</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// val = [2, 6, 4];
+{{ val|sort }}
+// => 2,4,6</code></pre>
+            <pre><code class="JavaScript">// val = 'zaq';
+{{ val|sort }}
+// => aqz</code></pre>
+            <pre><code class="JavaScript">// val = { bar: 1, foo: 2 }
+{{ val|sort(true) }}
+// => foo,bar</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_striptags ------------------>
+          <section id="idocs_striptags">
+            <h2>striptags</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L539">lib/wjst.js#L539</a></p>
+            <p>Strip HTML tags.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:Returns the same object as the input, but with all string values
+              stripped of tags.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// stuff = '<p>foobar</p>';
+{{ stuff|striptags }}
+// => foobar</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_title ------------------>
+          <section id="idocs_title">
+            <h2>title</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L564">lib/wjst.js#564</a></p>
+            <p>Capitalizes every word given and lower-cases all other letters.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:Returns the same object as the input, but with all words in strings
+              title-cased.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_str = 'this is soMe text';
+{{ my_str|title }}
+// => This Is Some Text</code></pre>
+            <pre><code class="JavaScript">// my_arr = ['hi', 'this', 'is', 'an', 'array'];
+{{ my_arr|title|join(' ') }}
+// => Hi This Is An Array</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_uniq ------------------>
+          <section id="idocs_uniq">
+            <h2>uniq</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L586">lib/wjst.js#L586</a></p>
+            <p>Remove all duplicate items from an array.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">array</code>:Array with unique items. If input was not an array, the original
+              item is returned untouched.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_arr = [1, 2, 3, 4, 4, 3, 2, 1];
+{{ my_arr|uniq|join(',') }}
+// => 1,2,3,4</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_upper ------------------>
+          <section id="idocs_upper">
+            <h2>upper</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L618">lib/wjst.js#L618</a></p>
+            <p>Convert the input to all uppercase letters. If an object or array is provided, all values will be
+              uppercased.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:Returns the same type as the input, with all strings upper-cased.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_str = 'tacos';
+{{ my_str|upper }}
+// => TACOS</code></pre>
+            <pre><code class="JavaScript">// my_arr = ['tacos', 'burritos'];
+{{ my_arr|upper|join(' & ') }}
+// => TACOS & BURRITOS</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_url_encode ------------------>
+          <section id="idocs_url_encode">
+            <h2>url_encode</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L638">lib/wjst.js#L638</a></p>
+            <p>URL-encode a string. If an object or array is passed, all values will be URL-encoded.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:URL-encoded string.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_str = 'param=1&anotherParam=2';
+{{ my_str|url_encode }}
+// => param%3D1%26anotherParam%3D2</code></pre>
+          </section>
+          <hr class="divider">
+
+          <!------------------ idocs_url_decode------------------>
+          <section id="idocs_url_decode">
+            <h2>url_decode</h2>
+            <p class="small-font">Source: <a
+                href="https://github.com/WebArtWork/wjst/blob/master/lib/filters.js#L657">lib/wjst.js#L657</a></p>
+            <p>URL-decode a string. If an object or array is passed, all values will be URL-decoded.</p>
+            <h3>Returns</h3>
+            <p><code class="JavaScript">*</code>:URL-decoded string.</p>
+            <h3>Examples</h3>
+            <pre><code class="JavaScript">// my_str = 'param%3D1%26anotherParam%3D2';
+{{ my_str|url_decode }}
+// => param=1&anotherParam=2</code></pre>
+          </section>
+          <hr class="divider">
+        </div>
+      </div>
+    </div>
+    <!-- Content end -->
+
+    <!-- Footer ============================ -->
+    <footer id="footer" class="section bg-dark-1 footer-text-light">
+      <div class="container">
+        <!-- <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+          <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+              data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+              data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+              data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+              data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+        </ul> -->
+        <p class="text-center">Wjst is copyright &copy;2022 <a href="https://webart.work/sign"> Honchar Denys</a>,
+          licensed for use under the permissive MIT Open Source License.</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript ============================ -->
+  <script src="/wjst/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/wjst/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="/wjst/assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="/wjst/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="/wjst/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="/wjst/assets/js/theme.js"></script>
+</body>
+
+</html>
+	<script src="/docs/js/scribbler.js"></script>
+</body>
+</html>

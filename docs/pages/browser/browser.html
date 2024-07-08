@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="/wjst/assets/images/favicon.png" rel="icon" />
+  <title>Documentation | Your ThemeForest item Name</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet ============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/vendor/highlight.js/styles/hybrid.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/css/stylesheet.css" />
+
+  <link rel="stylesheet" type="text/css" href="/wjst/assets/sass/bootstrap/_reboot.scss" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper =============================== -->
+  <div id="main-wrapper">
+
+    <!-- Header ============================ -->
+    <header id="header" class="sticky-top">
+      <!-- Navbar -->
+      <nav class="primary-menu navbar navbar-expand-lg bg-dark-1 navbar-text-light">
+        <div class="container-fluid">
+          <!-- Sidebar Toggler -->
+          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span
+              class="w-75"></span><span class="w-50"></span></button>
+
+          <!-- Logo -->
+          <a class="logo ml-md-3" href="/" title="WAW">
+            <img src="/wjst/assets/images/spider-logo-v2.svg" alt="WAW" width="45" />
+          </a>
+
+          <span class="text-2 ml-3">Wjst - A Node.js and Browser JavaScript Template Engine</span>
+          <!-- Logo End -->
+
+          <!-- Navbar Toggler -->
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#header-nav"><span></span><span></span><span></span></button>
+
+          <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li><a href="/">Home</a></li>
+            </ul>
+          </div>
+          <ul class="social-icons social-icons-lg ml-lg-2 mr-2">
+            <li class="social-icons-github">
+              <a data-toggle="tooltip" href="https://github.com/WebArtWork/wjst" target="_blank" title=""
+                data-original-title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Content ============================ -->
+    <div id="content" role="main">
+      <!-- Sidebar Navigation ============================ -->
+      <div class="idocs-navigation bg-dark-1 docs-navigation-dark">
+        <ul class="nav flex-column ">
+
+          <li class="nav-item"><a class="nav-link" href="/doc">Getting Started</a>
+
+          <li class="nav-item"><a class="nav-link" href="/api">Wjst API</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_object_wjstopts">Object: WjstOpts</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_object_cacheoptions">Object: CacheOptions</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_object_templateLoader">Object: TemplateLoader</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_version">wjst.version</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setDefaults">wjst.setDefaults</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setDefaultTZOffset">wjst.setDefaultTZOffset</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_Wjst">wjst.Wjst</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_invalidateCache">wjst.invalidateCache</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setFilter">wjst.setFilter</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setTag">wjst.setTag</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_setExtension">wjst.setExtension</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_precompile">wjst.precompile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_render">wjst.render</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_renderFile">wjst.renderFile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_compile">wjst.compile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_compileFile">wjst.compileFile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wjst_run">wjst.run</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/filters">Filters</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_addslashes">addslashes</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_capitalize">capitalize</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_date">date</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_default">default</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_escape">escape</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_first">first</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_groupBy">groupBy</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_join">join</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_json">json</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_last">last</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_length">length</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_lower">lower</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_raw">raw</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_replace">replace</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_reverse">reverse</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_safe">safe</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_sort">sort</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_striptags">striptags</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_title">title</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_uniq">uniq</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_upper">upper</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_url_encode">url_encode</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_url_decode">url_decode</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link active" href="/tags">Tags</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_autoescape">autoescape</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_block">block</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_else">else</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_elif">elif</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_extends">extends</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_filter">filter</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_for">for</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_if">if</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_import">import</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_include">include</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_macro">macro</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_parent">parent</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_raw_tag">raw</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_set">set</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_spaceless">spaceless</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link active" href="/loaders">Template Loaders</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_builtin">Built-Ins</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_custom_loaders">Custom Loaders</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_resolve">⤷ resolve</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_load">⤷ load</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/cli">Command-Line</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_installation_cli">Installation</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_usage">Usage</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_examples">Examples</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item"><a class="nav-link active" href="#idocs-browser-usage">Browser Usage</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="/extending">Extending Wjst</a>
+            <!-- <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_custom_filters">Custom Filters</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_custom_tags">Custom Tags</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_parse">parse</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_compile">compile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_ends">ends</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_blockLevel">blockLevel</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_token_types">Token Types</a></li>
+            </ul> -->
+          </li>
+        </ul>
+      </div>
+
+      <!-- Docs Content ============================ -->
+      <div class="idocs-content bg-dark-1">
+        <div class="container">
+
+          <!-- Getting Started ============================ -->
+          <section id="idocs-browser-usage">
+            <h1>Wjst in the Browser</h1>
+            <p>Most of Wjst works in the browser in the same way that Wjst works within node.js. The only exception to this is that Wjst is unable to look up files by their path name, unless you directly tell Wjst what each template's path name is before hand.</p>
+            <p>In short, Wjst cannot resolve the directive <code class="JavaScript">{%raw%}{% extends "./myfile.html" %}{%endraw%}</code> and <code class="JavaScript">{%raw%}{% include "./myfile.html" %}{%endraw%}</code> without first having already been told about <code class="JavaScript">{%raw%}./myfile.html{%endraw%}</code>.</p>
+            <p>The best way to work around this is to first pre-compile your templates using the Wjst <a href="/cli">command-line interface</a>.</p>
+            <ul class="dot-list">
+              <li><p>Compile each template into JavaScript files. Assign a method name to the output that will be globally available in your browser.</p></li>
+              <pre><code class="JavaScript">{%raw%}$ wjst compile myfile.html --method-name=myfile > myfile.js{%endraw%}</code></pre>
+              <li><p>Include Wjst and your <code class="JavaScript">myfile.js</code> in your web page.</p></li>
+              <pre><code class="JavaScript">{%raw%}&lt;script src="wjst.min.js"&gt;&lt;/script&gt;
+&lt;script src="myfile.js"&gt;&lt;/script&gt;{%endraw%}</code></pre>
+              <li><p>Pre-run the template to prime Wjst's cache.</p></li>
+              <pre><code class="JavaScript">{%raw%}wjst.run(myfile, {}, '/myfile.html');{%endraw%}</code></pre>
+              <li><p>Now, you are ready to render a template in-browser that can extend <code class="JavaScript">myfile.html</code></p></li>
+              <pre><code class="JavaScript">{%raw%}const tpl = '{% extends "./myfile.html" %}{% block content %}{{ stuff }}{% endblock %}';
+const output = wjst.render(tpl, { filename: '/tpl', locals: { stuff: 'awesome' }});
+document.querySelector('#foo').innerHTML = output;{%endraw%}</code></pre>
+            </ul>
+          </section>
+          <hr class="divider">
+        </div>
+      </div>
+    </div>
+    <!-- Content end -->
+
+    <!-- Footer ============================ -->
+    <footer id="footer" class="section bg-dark-1 footer-text-light">
+      <div class="container">
+        <!-- <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+          <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+              data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+              data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+              data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+              data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+        </ul> -->
+        <p class="text-center">Wjst is copyright &copy;2022 <a href="https://webart.work/sign"> Honchar Denys</a>,
+          licensed for use under the permissive MIT Open Source License.</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript ============================ -->
+  <script src="/wjst/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/wjst/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="/wjst/assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="/wjst/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="/wjst/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="/wjst/assets/js/theme.js"></script>
+</body>
+
+</html>
