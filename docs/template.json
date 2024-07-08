@@ -3,8 +3,8 @@
 	"description": "Description which will fit on all pages",
 	"keywords": "waw, web art work, server render, template",
 	"prefix": "/wjst",
-	"favicon": "/wjst/img/favicon.ico",
-	"image": "https://webartwork.github.io/wjst/img/avatar.png",
+	"favicon": "img/favicon.ico",
+	"image": "https://webartwork.github.ioimg/avatar.png",
 	"author": "Honchar Denys",
 	"scss": "scss/index.scss",
 	"variables": {
