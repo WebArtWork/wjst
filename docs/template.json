@@ -1,6 +1,6 @@
 {
 	"title": "WJST | Web Art Work by waw framework",
-	"description": "WJST | Web Art Work by waw framework is a powerful and flexible template engine designed to simplify web development. With its intuitive syntax and robust features, WJST enables developers to create dynamic and efficient web applications effortlessly. Explore our documentation, examples, and community resources to get started and elevate your web development projects.",
+	"description": "WJST, by waw framework, is a powerful and flexible template engine designed to simplify web development. With its intuitive syntax and robust features, WJST enables developers to create dynamic and efficient web applications effortlessly. Explore our documentation, examples, and community resources to get started and elevate your web development projects.",
 	"keywords": "waw, web art work, server render, template",
 	"prefix": "/wjst",
 	"favicon": "img/favicon.ico",
