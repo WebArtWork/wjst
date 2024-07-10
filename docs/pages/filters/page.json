@@ -1,3 +1,5 @@
 {
-	"name": "filters"
+	"name": "filters",
+	"title": "WJST filters | Web Art Work by waw framework",
+	"description": "Welcome to the 'filters' section on the WJST website by waw framework. Here you will find all the necessary information and examples of using filters in our template engine. Our documentation will help you understand how to effectively use filters to enhance the functionality of your web projects with WJST."
 }
