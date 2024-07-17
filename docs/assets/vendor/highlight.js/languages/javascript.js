@@ -5,8 +5,8 @@ Category: common, scripting
 Website: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 */
 
-import * as ECMAScript from "./lib/ecmascript";
-import * as regex from "../lib/regex";
+import * as ECMAScript from "./https://github.com/WebArtWork/wjst/blob/master/lib/ecmascript";
+import * as regex from "../https://github.com/WebArtWork/wjst/blob/master/lib/regex";
 
 export default function(hljs) {
   var IDENT_RE = ECMAScript.IDENT_RE;

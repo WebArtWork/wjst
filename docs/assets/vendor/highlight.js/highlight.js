@@ -4,12 +4,12 @@ https://highlightjs.org/
 */
 
 import deepFreeze from './vendor/deep_freeze';
-import Response from './lib/response';
-import TokenTreeEmitter from './lib/token_tree';
-import * as regex from './lib/regex';
-import * as utils from './lib/utils';
-import * as MODES from './lib/modes';
-import { compileLanguage } from './lib/mode_compiler';
+import Response from './https://github.com/WebArtWork/wjst/blob/master/lib/response';
+import TokenTreeEmitter from './https://github.com/WebArtWork/wjst/blob/master/lib/token_tree';
+import * as regex from './https://github.com/WebArtWork/wjst/blob/master/lib/regex';
+import * as utils from './https://github.com/WebArtWork/wjst/blob/master/lib/utils';
+import * as MODES from './https://github.com/WebArtWork/wjst/blob/master/lib/modes';
+import { compileLanguage } from './https://github.com/WebArtWork/wjst/blob/master/lib/mode_compiler';
 import * as packageJSON from '../package.json';
 
 const escape = utils.escapeHTML;

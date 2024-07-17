@@ -7,7 +7,7 @@ Category: common, scripting
 Website: https://coffeescript.org
 */
 
-import * as ECMAScript from "./lib/ecmascript";
+import * as ECMAScript from "./https://github.com/WebArtWork/wjst/blob/master/lib/ecmascript";
 
 export default function(hljs) {
   var COFFEE_BUILT_INS = [

@@ -8,7 +8,7 @@ Website: https://livescript.net
 Category: scripting
 */
 
-import * as ECMAScript from "./lib/ecmascript";
+import * as ECMAScript from "./https://github.com/WebArtWork/wjst/blob/master/lib/ecmascript";
 
 export default function(hljs) {
   var LIVESCRIPT_BUILT_INS = [
