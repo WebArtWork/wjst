@@ -332,32 +332,195 @@ return '_output += "fallback";\n';
 		<!------------------ idocs_ends ------------------>
 		<section id="idocs_ends">
 			<h3>ends</h3>
-			<p></p>
-			<pre><code class="JavaScript"></code></pre>
-			<pre><code class="JavaScript"></code></pre>
+			<p>Controls whether or not a tag must have an <code
+					class="JavaScript">{% raw %} {% end[tagName] %}{% endraw %}</code> declared after usage in
+				templates.</p>
+			<pre><code class="JavaScript">exports.ends = true;
+// => A template that fails to close this tag will throw an Error.</code></pre>
+			<pre><code class="JavaScript">exports.ends = false;
+// => A template attempts close this tag will throw an Error.</code></pre>
 		</section>
 		<hr class="divider">
 
 		<!------------------ idocs_blockLevel ------------------>
 		<section id="idocs_blockLevel">
 			<h3>blockLevel</h3>
-			<p></p>
-			<pre><code class="JavaScript"></code></pre>
-			<pre><code class="JavaScript"></code></pre>
+			<p>Allow the tag to be written outside of <code
+					class="JavaScript"> {% raw %} {% block &lt;name&gt; %}{% endblock %}{% endraw %}</code> tags when
+				extending a parent template.</p>
+			<pre><code class="JavaScript">exports.blockLevel = true;</code></pre>
+			<pre><code class="JavaScript">{% raw %}{% extends "foo" %}
+{% mytag foo bar baz %}
+// Normally this will be ignored, but since we allowed it to be block-level,
+// it will be included in the fully-parsed template.
+				
+{% block content %}
+...
+{% endblock %}{% endraw %}</code></pre>
 		</section>
 		<hr class="divider">
 
 		<!------------------ idocs_token_types ------------------>
 		<section id="idocs_token_types">
-			<h2>Custom Tags</h2>
-			<p>Wjst can be extended to handle custom tags that will perform operations on full blocks of your templates.
-				Use <a href="/api/#setTag"><code
-						class="JavaScript">wjst.setTag(name, parse, compile, ends, blockLevel)</code></a> to add your
-				custom tag.</p>
-			<p>All of Wjst's tags are written using the same api (with a few exceptions for core modules, like <code
-					class="JavaScript">extends</code> and <code class="JavaScript">block</code>). View a tag's source to
-				see more examples to write your own custom tags.</p>
-			<h3></h3>
+			<h2>TYPES</h2>
+			<p>Enum for token types.</p>
+			<div class="table-responsive">
+				<table class="table table-bordered table-dark table-striped">
+					<thead>
+						<tr>
+							<th scope="col">Value</th>
+							<th scope="col">Name</th>
+							<th scope="col">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row"><code class="JavaScript">'*'</code></td>
+							<td></td>
+							<td>For every token, run the given callback.</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">'start'</code></td>
+							<td></td>
+							<td>Run before any token is parsed.</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">'end'</code></td>
+							<td></td>
+							<td>Run after all other tokens have been parsed.</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">0</code></td>
+							<td scope="row"><code class="JavaScript">types.WHITESPACE</code></td>
+							<td>Whitespace</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">1</code></td>
+							<td scope="row"><code class="JavaScript">types.STRING</code></td>
+							<td>Plain string</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">2</code></td>
+							<td scope="row"><code class="JavaScript">types.FILTER</code></td>
+							<td>Variable filter</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">3</code></td>
+							<td scope="row"><code class="JavaScript">types.FILTEREMPTY</code></td>
+							<td>Empty variable filter</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">4</code></td>
+							<td scope="row"><code class="JavaScript">types.FUNCTION</code></td>
+							<td>Function</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">5</code></td>
+							<td scope="row"><code class="JavaScript">types.FUNCTIONEMPTY</code></td>
+							<td>Function with no arguments</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">6</code></td>
+							<td scope="row"><code class="JavaScript">types.PARENOPEN</code></td>
+							<td>Open parenthesis</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">7</code></td>
+							<td scope="row"><code class="JavaScript">types.PARENCLOSE</code></td>
+							<td>Close parenthesis</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">8</code></td>
+							<td scope="row"><code class="JavaScript">types.COMMA</code></td>
+							<td>Comma</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">9</code></td>
+							<td scope="row"><code class="JavaScript">types.VAR</code></td>
+							<td>Variable</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">10</code></td>
+							<td scope="row"><code class="JavaScript">types.NUMBER</code></td>
+							<td>Number</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">11</code></td>
+							<td scope="row"><code class="JavaScript">types.OPERATOR</code></td>
+							<td>Math operator</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">12</code></td>
+							<td scope="row"><code class="JavaScript">types.BRACKETOPEN</code></td>
+							<td>Open square bracket</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">13</code></td>
+							<td scope="row"><code class="JavaScript">types.BRACKETCLOSE</code></td>
+							<td>Close square bracket</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">14</code></td>
+							<td scope="row"><code class="JavaScript">types.DOTKEY</code></td>
+							<td>Key on an object using dot-notation</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">15</code></td>
+							<td scope="row"><code class="JavaScript">types.ARRAYOPEN</code></td>
+							<td>Start of an array</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">17</code></td>
+							<td scope="row"><code class="JavaScript">types.CURLYOPEN</code></td>
+							<td>Open curly brace</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">18</code></td>
+							<td scope="row"><code class="JavaScript">types.CURLYCLOSE</code></td>
+							<td>Close curly brace</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">19</code></td>
+							<td scope="row"><code class="JavaScript">types.COLON</code></td>
+							<td>Colon (:)</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">20</code></td>
+							<td scope="row"><code class="JavaScript">types.COMPARATOR</code></td>
+							<td>JavaScript-valid comparator</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">21</code></td>
+							<td scope="row"><code class="JavaScript">types.LOGIC</code></td>
+							<td>Boolean logic</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">22</code></td>
+							<td scope="row"><code class="JavaScript">types.NOT</code></td>
+							<td>Boolean logic "not"</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">23</code></td>
+							<td scope="row"><code class="JavaScript">types.BOOL</code></td>
+							<td>true or false</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">24</code></td>
+							<td scope="row"><code class="JavaScript">types.ASSIGNMENT</code></td>
+							<td>Variable assignment</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">25</code></td>
+							<td scope="row"><code class="JavaScript">types.METHODOPEN</code></td>
+							<td>Start of a method</td>
+						</tr>
+						<tr>
+							<td scope="row"><code class="JavaScript">100</code></td>
+							<td scope="row"><code class="JavaScript">types.UNKNOWN</code></td>
+							<td>Unknown type</td>
+						</tr>
+					</tbody>
+				</table>
 		</section>
 		<hr class="divider">
 	</div>
