@@ -523,6 +523,7 @@ exports.Swig = function (opts) {
    * @return {object}         Renderable function and tokens object.
    */
   this.precompile = function (source, options) {
+    options = utils.extend({ swig: self }, options)
     var tokens = self.parse(source, options)
     var parents = getParents(tokens, options)
     var tpl
