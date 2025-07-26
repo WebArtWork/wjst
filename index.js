@@ -1,7 +1,7 @@
 var utils = require("./utils/utils");
 var _tags = require("./tags");
 var _filters = require("./filters");
-var parser = require("./parser");
+var parser = require("./utils/parser");
 var dateformatter = require("./utils/dateformatter");
 var loaders = require("./loaders");
 
