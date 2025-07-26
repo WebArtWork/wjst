@@ -10,7 +10,8 @@ exports.compile = function (compiler, args, content, parents, opts) {
   var file = args.shift()
   var parentFile = (args.pop() || '').replace(/\\/g, '\\')
   var filepath = file.replace(/^['"]|['"]$/g, '')
-  var parsed = _swig.parseFile(filepath, { resolveFrom: parentFile })
+  var swig = (opts && opts.swig) || _swig
+  var parsed = swig.parseFile(filepath, { resolveFrom: parentFile })
   return compiler(parsed.tokens, parents, opts)
 }
 
