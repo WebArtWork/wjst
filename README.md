@@ -73,3 +73,15 @@ How it works
 ------------
 
 Wjst reads template files and translates them into cached javascript functions. When we later render a template we call the evaluated function, passing a context object as an argument.
+
+Embed Tag
+---------
+
+An embedded template is parsed into the parent during compilation.
+
+```html
+{% for section in sections %}
+  {% embed section.src %}
+{% endfor %}
+```
+
