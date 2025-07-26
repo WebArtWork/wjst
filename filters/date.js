@@ -17,7 +17,7 @@
  * @return {string}                   Formatted date string.
  */
 
-const dateFormatter = require("./utils/dateformatter");
+const dateFormatter = require("../utils/dateformatter");
 
 const date = function (input, format, offset, abbr) {
 	var l = format.length;

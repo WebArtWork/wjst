@@ -1,5 +1,5 @@
-var utils = require("./utils/utils");
-var lexer = require("./utils/lexer");
+var utils = require("./utils");
+var lexer = require("./lexer");
 
 var _t = lexer.types;
 var _reserved = [

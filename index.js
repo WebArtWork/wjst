@@ -712,6 +712,8 @@ exports.Swig = function (opts) {
 			options = {};
 		}
 
+		options._root = process.cwd();
+
 		pathname = self.options.loader.resolve(pathname, options.resolveFrom);
 		if (!options.filename) {
 			options = utils.extend({ filename: pathname }, options);
