@@ -1,75 +1,36 @@
-# wjst
+# iDocs
+iDocs is free one page documentation html template built with Bootstrap 4. Which helps you to create your offline and online documentation for your themes, templates, plugins and software.
 
-[Wjst](https://webartwork.github.io/wjst) is an awesome, Django/Jinja-like template engine for node.js.
+## Overview:
+<a href="https://harnishdesign.net/idocs-free-one-page-documentation-html-template.html">Template Overview Page</a>
 
-Features
---------
+## Demo:
+Click this link for a live demo : <a href="https://harnishdesign.net/demo/html/idocs/demos.html">View a Demo here</a>
 
-* Available for node.js **and** major web browsers!
-* [Express](http://expressjs.com/) compatible.
-* Object-Oriented template inheritance.
-* Apply filters and transformations to output in your templates.
-* Automatically escapes all output for safe HTML rendering.
-* Lots of iteration and conditionals supported.
-* Robust without the bloat.
-* Extendable and customizable. See [Wjst-Extras](https://github.com/WebArtWork/wjst-extras) for some examples.
-* Great [code coverage](http://webartwork.github.io/wjst/coverage.html).
+## How to Use:
+You can read details documentation here - <a href="https://harnishdesign.net/demo/html/idocs/help/">View Documentation Here</a>
 
-Need Help? Have Questions? Comments?
-------------------------------------
+## Bugs and Issues
+Have an issue with this template? <a href="https://github.com/harnishdesign/iDocs/issues">Open a new issue here</a>
 
-* [Mailing List/Google Group](http://groups.google.com/forum/#!forum/swig-templates)
-* [StackOverflow](https://stackoverflow.com/questions/tagged/wjst)
+OR Leave a comment on the <a href="https://harnishdesign.net/idocs-free-one-page-documentation-html-template.html">Template Overview Page at Harnish Design</a> for general inquiry.
 
-Installation
-------------
-
-    npm install wjst
-
-Documentation
--------------
-
-All documentation can be viewed online on the [Wjst Website](https://webartwork.github.io/wjst).
-
-Basic Example
--------------
-
-### Template code `index.html`
-
-```html
-<h1>{{ pagename|title }}</h1>
+## Credits:
 <ul>
-{% for author in authors %}
-    <li{% if loop.first %} class="first"{% endif %}>{{ author }}</li>
-{% endfor %}
+<li><a href="https://getbootstrap.com/">Bootstrap 4</a></li>
+<li><a href="http://www.jquery.com/">jQuery</a></li>
+<li><a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery easing</a></li>
+<li><a href="http://dimsemenov.com/plugins/magnific-popup/">Magnific Popup</a></li>
+<li><a href="https://fontawesome.com/">Font Awesome</a></li>
+<li><a href="https://highlightjs.org/">Highlight Js</a></li>
+<li><a href="https://unsplash.com/">Unsplash</a></li>
 </ul>
-```
 
-### node.js code
+## Created By:
+<a href="https://www.harnishdesign.net/">Harnish Design</a>
 
-```js
-const wjst  = require('wjst');
-const template = wjst.compileFile('./index.html');
-const output = template({
-    pagename: 'awesome people',
-    authors: ['Den', 'Paul', 'Jane']
-});
-```
+## Donations & Support
+My Brain needs two urgent coffees to continue working. Buy one or two coffees for me here: https://opencollective.com/idocs
 
-### Output
-
-```html
-<h1>Awesome People</h1>
-<ul>
-    <li class="first">Den</li>
-    <li>Paul</li>
-    <li>Jane</li>
-</ul>
-```
-
-For working example see [examples/basic](https://github.com/webartwork/wjst/tree/master/examples/basic)
-
-How it works
-------------
-
-Wjst reads template files and translates them into cached javascript functions. When we later render a template we call the evaluated function, passing a context object as an argument.
+## License:
+See the <a href="https://github.com/harnishdesign/iDocs/blob/main/LICENSE">LICENSE</a> file for license rights and limitations (MIT).

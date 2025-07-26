@@ -1,16 +1,1 @@
-.DS_Store
-*.log
-node_modules
-tests/browser/swig.pack.js
-tests/browser/*.test.js
-lib-cov/*
-tests/coverage.html
-dist/*
-tmp_build/*
-docs/data/*
-browser/test/tests.js
-tests/browser.js
-tmp
-docs/docs/*.json
-docs/coverage.html
-build/
+dist
