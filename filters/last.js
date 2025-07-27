@@ -1,5 +1,22 @@
 const utils = require("../utils/utils");
 
+/**
+ * Get the last item in an array or character in a string. All other objects will attempt to return the last value available.
+ *
+ * @example
+ * // my_arr = ['a', 'b', 'c']
+ * {{ my_arr|last }}
+ * // => c
+ *
+ * @example
+ * // my_val = 'Tacos'
+ * {{ my_val|last }}
+ * // s
+ *
+ * @param  {*} input
+ * @return {*}          The last item of the array or last character of the string.input.
+ */
+
 module.exports = function last(input) {
     if (typeof input === "object" && !utils.isArray(input)) {
         var keys = utils.keys(input);

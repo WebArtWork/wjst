@@ -1,5 +1,21 @@
 const iterateFilter = require("./iterateFilter");
 
+/**
+ * Force escape the output of the variable. Optionally use `e` as a shortcut filter name. This filter will be applied by default if autoescape is turned on.
+ *
+ * @example
+ * {{ "<blah>"|escape }}
+ * // => &lt;blah&gt;
+ *
+ * @example
+ * {{ "<blah>"|e("js") }}
+ * // => \u003Cblah\u003E
+ *
+ * @param  {*} input
+ * @param  {string} [type='html']   If you pass the string js in as the type, output will be escaped so that it is safe for JavaScript execution.
+ * @return {string}         Escaped string.
+ */
+
 module.exports = function escape(input, type) {
     var out = iterateFilter.apply(escape, arguments);
     var inp = input;

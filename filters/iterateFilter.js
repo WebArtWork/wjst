@@ -1,5 +1,12 @@
 const utils = require("../utils/utils");
 
+/**
+ * Helper method to recursively run a filter across an object/array and apply it to all of the object/array's values.
+ * @param  {*} input
+ * @return {*}
+ * @private
+ */
+
 function iterateFilter(input) {
     var self = this;
     var out = {};
