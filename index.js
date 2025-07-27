@@ -1,3 +1,4 @@
+const fs = require("fs");
 var utils = require("./utils/utils");
 var _tags = require("./tags");
 var _filters = require("./filters");
@@ -712,8 +713,13 @@ exports.Swig = function (opts) {
 			options = {};
 		}
 
-		options._root = process.cwd();
-
+		if (
+			!fs.existsSync(pathname) &&
+			fs.existsSync(process.cwd() + pathname)
+		) {
+			pathname = process.cwd() + pathname;
+		}
+		
 		pathname = self.options.loader.resolve(pathname, options.resolveFrom);
 		if (!options.filename) {
 			options = utils.extend({ filename: pathname }, options);
